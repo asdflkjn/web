@@ -1,0 +1,73 @@
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin: 10px auto; /* 가운데 정렬 + 여백 */
+    overflow: hidden;
+    background: white;
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .card-text {
+    font-size: 14px;
+    color: #555;
+  }
+
+/* main overwrite */
+#main-container .carousel-inner{
+	display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+#main-container .carousel-inner>.item{
+	text-align:center;
+	width:100%;
+	height:560px !important;	
+	overflow:hidden !important;
+}
+
+#main-container .img-responsive, 
+#main-container .thumbnail>img, 
+#main-container .thumbnail a>img, 
+#main-container .carousel-inner>.item>img, 
+#main-container .carousel-inner>.item>a>img{
+	object-fit:cover;
+	height:auto;
+	width:100%;
+	max-width:100%;	
+	margin:0 auto !important;
+	/*height:520px !important;	*/
+}
+
+#main-container .img-responsive, 
+#main-container .thumbnail>img, 
+#main-container .thumbnail a>img, 
+#main-container .carousel-inner>.item>img, 
+#main-container .carousel-inner>.item>a>img {
+	margin:0 auto !important;
+	/* height:520px !important; */
+}
+
+
+

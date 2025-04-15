@@ -1,0 +1,86 @@
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin: 10px auto; /* 가운데 정렬 + 여백 */
+    overflow: hidden;
+    background: white;
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .card-title {
+  display:block;  
+    overflow:hidden;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+     
+    
+    /* 여러 줄 자르기 추가 스타일 */
+    white-space: normal;
+    line-height: 1.2;
+    height: 38px;
+    text-align: center;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .card-text {
+    font-size: 14px;
+    color: #555;
+  }
+
+/* main overwrite */
+#main-container .carousel-inner{
+	display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+#main-container .carousel-inner>.item{
+	text-align:center;
+	width:100%;
+	max-height:560px !important;	
+	overflow:hidden !important;
+}
+
+#main-container .img-responsive, 
+#main-container .thumbnail>img, 
+#main-container .thumbnail a>img, 
+#main-container .carousel-inner>.item>img, 
+#main-container .carousel-inner>.item>a>img{
+	object-fit:cover;
+	height:auto;
+	width:100%;
+	max-width:1920px;	
+	margin:0 auto !important;
+	/*height:520px !important;	*/
+}
+
+#main-container .img-responsive, 
+#main-container .thumbnail>img, 
+#main-container .thumbnail a>img, 
+#main-container .carousel-inner>.item>img, 
+#main-container .carousel-inner>.item>a>img {
+	margin:0 auto !important;
+	/* height:520px !important; */
+}
+
+
+

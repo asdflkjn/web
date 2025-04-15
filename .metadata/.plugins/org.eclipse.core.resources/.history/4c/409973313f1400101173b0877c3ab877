@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0_함수의인자.html</title>
+
+<script type="text/javascript">
+
+function method(a, b){ //받을 것만 적으면 됨
+	document.write(`A= ${a}, B=${b} <br/>`);
+}
+
+method(10, 20); 
+method(3, 4, 5); //인자가 몇개이든 
+ 
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Document 예제 </title>
+<meta charset="UTF-8">
+<style type="text/css">
+ body { 
+		background-color: #ffcc33;
+		color: #2222ff;
+	} 	
+</style>
+
+<script type="text/Javascript">
+	window.onload = function(){
+    	document.getElementById('btn').onclick = function(){
+		//[1]id 값으로 찾기
+    	//var userName = document.getElementById('userName').value;
+    	//var userName = document.querySelector('#userName').value; //입력한 값을 변수에 담아라
+
+    	//[2]폼안의 name으로 찾기
+    	var userName = document.frm.username.value; //문서 안에서 폼의 이름(frm)으로 찾아줘 > 그 안쪽에서 다시 이름을 찾아줘, 이렇게 명확하게 네임 부여할것
+    	//var userName = document.forms[0].username.value; //forms: 폼태그의 여러개다라는 의미, 여러개라서 배열. 미권장, 위에걸로
+    	//var userName = frm.username.value; //document 생략되어도 알아서 찾아준다.
+    	
+    	document.querySelector('#result').innerHTML = userName + "님 반갑";
+    	}
+    }
+</script>
+</head>
+
+<body>
+	<!-- 폼태그 안에 있는 입력값은 서버로 전송할 수 있다  -->
+	<form name="frm">
+		당신의 이름은? <input type="text" id='userName' name='username' size="20">
+		<input type="button" value="확인" id='btn'>
+   	</form>
+	<div id='result'></div>
+</body>
+</html>
+
+<!--  이벤트바인딩방식을 이벤트 핸들러 방식으로 변경 -->

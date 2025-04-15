@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+
+
+<%
+//jsp는 화면만 담당, 디비 연계하는 건 모델단. 자바 클래스를 따로 만들거야
+
+	//1. 화면의 입력값을 얻어와서 VO 객체의 멤버로 담기
+	
+
+
+%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> 사원등록 </title>
+</head>
+<body>
+	 성공적으로 입력되었는지 DB에서 확인합니다.
+</body>
+</html>

@@ -1,0 +1,54 @@
+package basic;
+
+
+
+public class EmpDAO {
+	
+	String driver 	= "oracle.jdbc.driver.OracleDriver";
+	String url 		= "jdbc:oracle:thin:@127.0.0.1:1521:xe";
+	String user 	= "scott";
+	String pass		= "tiger";
+	
+	
+	public EmpDAO() throws Exception {
+		//1. 드라이버로딩
+		Class.forName(driver);
+		
+	}
+	
+	public void insert(EmpVO vo) throws Exception {
+		//2. ~ 7.
+		// 2. 연결객체 -안뜸
+		con = DriverManager.getConnection(url, user, pass);
+		
+		// 3. sql 문장 -> 사용자가 입력한 값, 변수
+		String sql = "SELECT count(*) AS cnt FROM emp";
+		
+		// 4. 전송객체 
+		PreparedStatement ps = con.prepareStatement(sql);
+				
+		// 5. 전송
+		ResultSet rs = ps.executeQuery();
+		
+		// [6. 결과 받아 처리]
+		//###################
+		rs.next();
+		int cnt = rs.getInt("CNT");  //1=첫번째 컬럼
+		System.out.println(cnt+"명의 사원이 있습니다");
+				
+		
+	}catch(Exception ex) {
+		System.out.println("실패:"+ex.getMessage());
+		ex.printStackTrace(); //DB에서 오라클에 연결할 수 있는 가상통로가 연결되었다
+	}finally {
+		//7. 닫기 -안뜸
+		try{con.close();}catch(Exception ex) {} 
+		//con cannot be resolved -> Connection con = null;
+		//Unhandled exception type SQLException
+	}
+	System.out.println("끝");
+
+		
+	}
+
+}

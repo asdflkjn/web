@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+</script>
+<title></title>
+</head>
+<body>
+
+<form name='fm'>
+	<input type='text' id='addr' readonly> <input type='button' id='btn_search' value='주소찾기'>
+	<input type='radio' name='loc' value='가산' >가산
+	<input type='radio' name='loc' value='판교' >판교
+	<input type='radio' name='loc' value='부평' >부평
+</form>
+</body>
+</html>

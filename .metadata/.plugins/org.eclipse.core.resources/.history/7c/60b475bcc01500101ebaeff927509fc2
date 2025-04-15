@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>00_object.html</title>
+
+<!-- 
+	객체 리터럴
+	
+	[장점] 별도의 클래스 구조 없이 빠르게 작성하고 구성이 자유롭다
+	
+	[단점] 구조가 없어서 객체의 구조 파악이 어렵다
+		  구조가 없어서 재사용이 불가
+ -->
+
+<script type="text/javascript">
+//빈거 우선 만들어봐 나중에 내가 넣어놀게
+var obj = {};
+obj.name = '홍길동';
+obj.age = 33;
+obj.display = function(){
+				document.write(name+"님은 "+age+"세 입니다.")
+			  }
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

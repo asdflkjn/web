@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Map / Set 내장 객체 </title>
+<script type="text/javascript">
+
+// 1. Map : 키와 값으로 관리하는 객체
+//value는 중복되고, key는 중복 안됨
+let m = new Map(); 
+m.set('java','1111');
+m.set('script','2222');
+m.set('nodejs', '2222');
+m.set('java','3333');
+/* 
+for(let item in m){ //m은 집합  ->index 는 맵에서 안쓴다.
+	document.write(item+'<br/>');
+}
+ */
+ /* 
+for(let item of m){
+	document.write(item+'<br/>');
+}//key가 동일한 애가 들어오면 값을 덮어쓴다. 맵의 특성
+
+for(let item of m){ //하나의 변수에
+	document.write(item[0]+":"+item[1]+'<br/>');
+}
+
+for(let [k,v] of m){ //키와 값을 각각 따로
+	document.write(k+":"+v+'<br/>');
+} */
+//동일한 결과를 받는 3가지 방법 
+ 
+ //[연습] 로그인 확인 처리한다고 가정
+ let inputId = 'java';
+let inputPw = '3333';
+
+//아이디와 패스워드가 동일하면 '로그인 성공'출력, 그렇지 않으면 '로그인 실패'출력
+
+if(inputId = 'java'){
+	document.write('로그인 성공');
+}else{
+	document.write('로그인 실패');
+}
+ 
+ 
+ 
+//-------------------------------------------------------
+// 2. Set  : 중복 값을 허용하지 않는 집합 관리 객체
+let s = new Set();
+s.add('tiger');
+s.add('dog');
+s.add('lion');
+s.add('dog');
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

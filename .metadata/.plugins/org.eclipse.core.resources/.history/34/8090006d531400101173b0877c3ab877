@@ -1,0 +1,12 @@
+package dbcon;
+
+public class ItemDAO {
+
+	public ItemDAO() throws Exception{  //생성자 함수 만들기
+		
+	}
+	
+	public void insert(ItemVO vo) throws Exception {  //insert함수 만들기 예외처리까지
+		System.out.println("[입력값확인]"+vo.toString());
+	}
+}

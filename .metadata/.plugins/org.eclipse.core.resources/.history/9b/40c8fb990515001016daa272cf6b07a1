@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>9_참고.html</title>
+
+<script type="text/javascript">
+window.onload = function(){
+	var items = document.querySelectorAll('#list > li');
+	
+	//var, let일 때 변수의 범위가 달라진다.
+	for(let i=0; i<items.length; i++){ //var를 let으로 바꾸면 해결
+		items[i].onclick=function(){ 
+		//items[i] - i가 0이면 <li>HTML</li>, 1이면 <li>CSS</li>, 2면 <li>JS</li> 
+			//alert('ok')
+			//alert(items[i].innerHTML); 안됨
+			alert(this.innerHTML); //위에랑 같은말
+			//alert(i); //i는3의 값을 갖고 있음. 이벤트함수는 연결만 한 것이고 눌려졌을 때 발생한다.
+			//innerHTML: 태그와 태그 사이에 애를 가지고 오는 애 (html, css, js등)
+		}
+	}
+}
+	
+	
+</script>
+
+</head>
+<body>
+
+	<h2 id='btn'>프로그래밍</h2>
+	<ul id='list'>
+		<li price='100'>HTML</li>
+		<li price='200'>CSS</li>
+		<li price='300'>JS</li> 
+	</ul>
+</body>
+</html>

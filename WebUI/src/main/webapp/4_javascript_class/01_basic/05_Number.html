@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Number 형과 형변환 </title>
+<script type="text/javascript">
+
+
+// 1. 숫자 형식 메소드 
+/* 
+var su = 123.456789;
+//var su = 1234.56789;
+document.writeln( su.toExponential(4)  + "<br/>" );	//소수점 몇째자리, 몇.몇*10의 몇승
+//document.writeln( us.toExponential(4)  + "<br/>" );	//1.2346e+3
+document.writeln( su.toFixed(3)  + "<br/>" );	//소수점 몇째자리	
+document.writeln( su.toFixed(7) + "<br/>" );	
+document.writeln( su.toPrecision(6)  + "<br/>" );	 //전체 자리수
+document.writeln( su.toPrecision(10)  + "<br/>" );	
+ */
+//-------------------------------------------------
+// 2. 형변환
+//var n = '777'; //네트워크 타고 주고받는건 무조건 문자열
+//var n = '700'; 
+//var n = '0700'; //문자열의 앞에 0은 의미가 없다고 생각하여 빼고 숫자로 변환해줌
+//var n = 'a700'; //NaN(not a number, null이랑 비슷?) number(숫자형)
+/* 
+var n = '700.99'; //Number: 700.99, parseInt: 700
+document.writeln(Number(n)+'<br/>');  //문자를 숫자로 변환
+document.writeln(typeof Number(n)+'<hr/>');
+document.writeln(parseInt(n)+'<br/>');  //문자를 숫자로 변환
+document.writeln(typeof parseInt(n)+'<hr/>');
+document.writeln(parseFloat(n)+'<br/>');  //문자를 숫자로 변환
+document.writeln(typeof parseFloat(n)+'<hr/>');
+*/
+//------------------------------------------------
+
+//자동형변환
+
+var v = 123 + '4'; //숫자+문자열 => 문자열
+document.writeln(v+'<br/>');
+document.writeln(typeof v+'<br/>');
+
+var v = 123 - '4'; //숫자-문자열 => 숫자열
+document.writeln(v+'<br/>');
+document.writeln(typeof v+'<br/>');
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

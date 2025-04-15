@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 새로 열려진 창 </title>
+<script type="text/javascript">
+
+window.onload = function(){
+	
+	var sel = frm.site;
+	//var를 쓰면 이벤트 걸릴 때 전역변수가 되어서 문제가 생겨 그래서 let을 쓰는거야
+	for(let i=0; i<sel.length; i++){ //var는 안됨. const도 쓰면 안됨 값이 바뀌니까
+		sel[i].onclick = function(){
+			alert(this.value);
+			//★★★★★★★★★★ opener: 팝업이 나를 연 모판을 참고하고 싶을때
+			//opener.location.href = this.value;
+			
+		}
+	}
+}
+
+</script>
+</head>
+<body>
+	<form name="frm">
+		<input type="radio" name="site" value='http://www.daum.net'> 다음 <br>
+		<input type="radio" name="site" value='http://www.naver.com' > 네이버 <br>
+		<input type="radio" name="site" value='http://www.nate.com'> 네이트 <br>
+		
+		<hr/>
+		<input type='text' name='temp'>
+		
+	</form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 우리사이트 회원가입</title>
+
+<script type="text/javascript">
+
+
+window.onload = function(){
+
+	
+		//9_sub.html 창을 열기
+		var winObj = window.open('9_sub.html','newWin'
+				, `width=${340}, height=${250}, top=${topPos}, left=${leftPos}`);
+
+		var topPos = (window.screen.height-winHeight)/2;
+		var leftPos = (window.screen.width-winWidth)/2;
+	
+		
+	document.querySelector('#btn').onclick = function(){
+		//오픈한 창의 값을 보내기
+		winObj.frm.temp.value = '본판에서 보낸 데이타';
+		
+	}
+	
+	var sel = frm.site;
+	for(let i=0; i<sel.length; i++){
+		sel[i].onclick = function(){
+			ifrm.fm.result.value = this.value;
+		}
+	}
+}
+	
+</script>
+	
+</head>
+<body>
+
+<form name="frm">
+		<select name="chooseSite">
+			<option name="site" value="http://www.daum.net">서울시</option>
+			<option name="site" value="http://www.naver.com">성남시</option>
+			<option name="site" value="http://www.nate.com">인천시</option>
+		</select><br/><br/>
+		<input type='text' id='addr' readonly> 
+</form>
+
+
+</body>
+</html>

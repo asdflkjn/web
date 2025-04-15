@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>language</title>
+
+<link rel="stylesheet" href="./language.css" />
+<script src="language.js"></script>
+
+</head>
+<body>
+
+	<table id='tbl'>
+		<tr>
+			<td class='first item' data-price='1000'><center>커피</center></td>
+			<td class='item' data-price=''2000''><center>녹차</center></td>
+		</tr>
+		
+		<tr>
+			<td class='first item' data-price='1500'><center>케익</center></td>
+			<td class='item' data-price='2500'><center>빵</center></td>
+		</tr>
+		
+		<tr>
+			<td class='first item' data-price='4000'><center>과자</center></td>
+			<td class='item' data-price='4500'><center>초코렛</center></td>
+		</tr>
+		
+	
+	</table>
+
+</body>
+</html>

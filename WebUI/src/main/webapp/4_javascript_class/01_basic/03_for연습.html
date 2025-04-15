@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>03_for연습.html</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+//★★★
+document.write('<table border = "2">');
+		k=0; //또는 var datㅁ = 1; 변수선언
+	for(var i=0;i<5;i++){
+		document.write('<tr>');					
+				for(var j=0;j<5;j++){ //=for(var j=0;j<5;j++, data++){
+					k++;
+					document.write('<td>' + k +'</td>'); //data
+					//트렌드 document.write(`<td>${data}</td>`);
+					//data++;
+				}	
+		document.write('</tr>');
+	}
+document.write('</table>');
+
+
+
+</script>	
+	
+	
+</body>
+
+
+</html>

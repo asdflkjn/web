@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 우리사이트 회원가입</title>
+
+<script type="text/javascript">
+
+window.onload = function(){
+		var child = window.open('9_카카오팝업창.html','newWin'
+				, 'width=480 height=400'); 
+		
+		var sel = frm.chooseSite;
+			sel.onchange = function(){
+				child.frm.cityResult.value = this.value;
+			}
+}
+</script>
+</head>
+<body>
+<form name="frm">		
+		<input type='text' name='locResult' id='addr' readonly> 
+		
+		<input type='text' id='sample6_postcod' placeholder='' readonly>
+		<input type='button' id='btn_search' value='주소찾기'>
+		
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title> 첫 연습 </title>
+
+<script type="text/javascript"
+		src='../lib/jquery-3.7.1.js'></script>
+<script type="text/javascript">
+
+$(function(){
+	$('#here').click(function(){
+		$('#here').text('클릭하면 내용이 바뀝니다');ㅔ
+	})
+})
+
+</script>
+
+</head>
+<body>
+	
+
+	<div id="here">
+	아자아자 제이쿼리~~!!! 
+	</div>
+	
+	
+	<div id="student">
+		<div id="name">홍길동</div>
+		<div id="age">34</div>
+	</div>
+
+
+	
+</body>
+</html>

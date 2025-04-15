@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+
+ window.onload = function(){
+	 
+	 var td = document.querySelector('td');
+	 td.onclick = function(){
+		 alert('OK');
+	 }
+	 
+	 
+	 
+ }

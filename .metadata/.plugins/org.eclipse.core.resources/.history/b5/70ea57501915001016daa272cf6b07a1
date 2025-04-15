@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+
+ window.onload = function(){
+	 
+	 document.getElementById('td').onclick = function(){
+		 alert('ok');
+		 
+	 }
+	 
+	 
+	 
+ }

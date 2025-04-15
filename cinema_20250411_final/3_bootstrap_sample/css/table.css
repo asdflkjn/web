@@ -1,0 +1,11 @@
+#tbl{
+	border:1px solid #ddd;
+}
+#tbl td{
+	width:100px;
+	height:60px;
+	color:yellow;
+}
+#tbl td.first{
+	background-color:blue;
+}

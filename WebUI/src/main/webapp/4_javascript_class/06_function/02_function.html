@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>리터럴 함수</title>
+</head>
+<body>
+	<script>
+
+	//***** [결론] 우리는 함수 선언을 호출 전에 하자
+	
+	// [ 호이스팅 개념을 모르는 경우 ]
+	// @ function 명령은 정적인 구조이고, 
+	// @ 함수리터럴과 화살표함수는 실행시 판단한다.
+
+	/*
+		호이스팅(hoisting:끌어올리다) : 
+			함수 선언문은 선언부가 뒤에 있어도 호이스팅이 되지만
+			함수 리터럴은 뒤에 있으면 호이스팅이 되지 않는다.
+	*/
+	
+	/* 
+	document.writeln('삼각형의 면적은 :' +  triangle(4,3) + '<br/>');
+	
+	function triangle ( base, height ){
+		return base * height / 2;
+	}
+	  */
+	/* 
+	 
+	document.writeln('4.삼각형의 면적은 2: ' +  triangle2(4,3) + '<br/>');		
+	
+	var triangle2 = function( base, height ){
+		return base * height / 2;
+	}	
+	 */
+	
+	
+	
+	// @ 함수는 데이터형의 일종이다. => 함수가 변수의 값이다 ★★ 자바스크립트 이해에 가장 중요한 문장
+	//함수는 변수랑 똑같이 취급한다. 
+	//함수였다가 문자였다가 숫자였다가 중구난방 변수처럼 막 쓰여
+	/* 
+	var triangle = function( base, height ){
+					return base * height / 2;
+					}
+	
+	document.writeln('4.삼각형의 면적은 2: ' +  triangle(4,3) + '<br/>');		
+	
+	document.writeln(triangle + '<hr/>'); //triangle이라는 변수에 함수 코딩이 들어간다.
+	
+	triangle = '문자로전환';
+	document.writeln(triangle + '<hr/>');
+	
+	triangle = 1004;
+	document.writeln(triangle + '<hr/>');
+	 */
+	
+	/* 
+	function doA(){
+		document.write(' 함수 A <br/>' );
+	}
+	
+	function doB(){
+		document.write(' 함수 B <br/>' );
+	}
+	
+	var arr = [doA, doB]; //함수가 위에 2개가 아니라 많이 있으면 배열을 한 문장에 넣어서 for문으로 반복문 돌리면 돼
+	console.log(arr);
+	
+	arr[0](); //doA();
+	 */
+	/* 
+	for(var i=0; i<arr.length; i++) {
+		arr[i]();
+	}
+	 */
+	
+	//함수가 다른 함수의 인자도 될 수 있어
+	
+	function f4(x,y,z){
+		 return z(x()+y()); // = return f3(f1()+f2()); //()소괄호는 실행/호출을 의미
+	 }
+		
+	 var f1 = function(){return 2;}
+	 var f2 = function(){return 1;}
+	 var f3 = function(a){return a*a;}
+	 
+	 var result = f4(f1,f2,f3);
+	 document.write('결과:'+result);
+	 
+	 
+	 //이해안되믄 버려랑
+	 
+	 function f4(x,y,z){
+		 return z(x()+y()); 
+	 }
+		
+	 var result = f4(
+					 function(){return 2;}
+					 ,function(){return 1;}
+					 ,function(a){return a*a;}
+					 );
+	 document.write('결과:'+result);
+	 
+	
+	 
+	 
+	</script>
+</body>
+</html>

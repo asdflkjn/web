@@ -1,0 +1,222 @@
+25.03.27.메모_김승민 선생님
+
+매일 매일 노션에 정리하기!
+이면지는 for문이나 제어문 연습할 때 사용하기
+오전은 시간표대로 진행 > 시간표 과목 보기 > 03월27일~04월02일 : UI/UX 예정
+출결 꼭 지키기
+평가 12개-60점 이상만 넘기
+하고픈말 있음 아침에 커피브레이크에 쌤 찾아가면 됨
+
+자바-데이터베이스 연결
+연습은 최대한 많이
+무조건 한번은 해보기
+아직 gpt쓰지 말고 프로젝트 할때만
+
+web폴더: 이클립스 워크스페이스
+프레임워크: 스프링 사용
+
+이클립스
+dynamic project 이름 WebUI, web.xml 체크해서 만들기
+
+환경설정- enc - refresh 2개 체크 꼭 확인(탐색기랑 싱크 맞출려고), UTF-8(한글 안깨지려고)
+	   - css, html utf-8로 맞추기
+	   
+cmd: 명령 프롬프트-까만창 익숙해지기
+PC: Personal Computer , 개인용 컴퓨터
+server용 컴퓨터: 회사에서 구동하는 컴퓨터
+
+cmd>
+ipconfig
+ IPv4 주소 . . . . . . . . . : 192.168.0.39
+IP주소: 컴퓨터를 찾아가는 주소
+여기는 고정 ip, 라우터/공유기가 꺼졌다 켜지면 주소가 바뀔 수 있다.
+본인 IP주소: 항상 저장할 것
+
+선생님 컴터 ip주소: 192.168.0.180
+ict: 선생님 컴터 계정
+user->ict : 내컴터 계정
+
+검색창- 원격 데스크톱 설정-켬 -> 안되면 제어판 
+제어판-계정 이름, 암호 ict로 통일
+
+이클립스
+webapp-new-html만들기-파일명 index.html
+검색창-\\192.168.0.180
+
+자주 쓰는 사이트
+cafe.naver.com/javassem
+https://tomcat.apache.org/  -비영리단체, 아파치, 탐캣은 웹서버 역할
+웹서버 역할을 하려면 apache라는 애를 서버로 구축
+asp/php/jsp 
+자바베이스-정부지원프로젝트-한국에 많아
+아파치는 자바 인식 못해-탐캣 설치해서 연동
+탐캣은 자바를 인식할 수 있게 하는 서버 역할
+ㄴ웹서버 역할하는 탐캣 설치할 예정
+
+탐캣 설치 후 경로 복사 :
+D:\web\apache-tomcat-9.0.102\apache-tomcat-9.0.102
+파일탐색기-내pc 속성-시스템-고급 시스템 설정-환경변수
+-새로만들기 : 변수이름: TOMCAT_HOME 
+			변수값: D:\web\apache-tomcat-9.0.102\apache-tomcat-9.0.102
+-확인
+
+이클립스 하단에 servers 찾기
+없으면: window-show view-servers
+new server-apache-tomcat9-next-browse: D:\web\apache-tomcat-9.0.102 (안에 파일 여러개 있는거), JRE: jre
+add all(안해도 됨)
+
+webui 우클릭-properties
+1. Java Build Path - Libraries 확인
+2. Java Compiler  - JavaSE-17 버전 확인
+3. Project Facets - Java 17 체크
+적용
+
+포트충돌 해결>
+서버 더블클릭-포트번호 2개 100자리 1로 변경 후 저장
+Ctrl F11-tomcat클릭-finish
+
+개발하기 편한 브라우저: 크롬
+Window-Web browser-chrome
+
+빨간 사각형-stop server 자주 눌러주기-Ctrl F11
+
+내컴퓨터, 내부망>
+localhost
+127.0.0.1
+
+내 IP주소>
+192.168.0.39
+
+키워드는 대문자로 권장
+
+명령 프롬>
+sqlplus system/1234
+select dbms_xdb.gethttpport() FROM dual;  > 8080
+exec dbms_xdb.sethttpport(6060); 
+select dbms_xdb.gethttpport() FROM dual;  > 6060 확인
+ㄴ명령프롬프트 6060은 오라클을 바꾼거야.
+ㄴ이클립스는 탐캣이 8080으로 써서 열어주는 거야.
+
+서버 더블클릭-포트 원래대로 8005, 8080
+Ctrl F11 - 8080변경 확인
+>> 8080포트로 넘어온다.
+
+글자를 치면 ip로 변환해서 컴터로 찾아간다.
+도메인을 구입해도 됨
+포트번호 80은 기본포트라 포트번호 안쳐도 됨
+파일명도 기본/으로 설정하면 안쳐도 됨.
+http://localhost:8080/WebUI/index.html
+http://localhost:8080/WebUI/
+
+서버-http를 80으로 변경
+http://localhost/WebUI/ IT주소/프로젝트명
+
+Modules - Edit Web Module : Path-/ 변경
+
+ip주소 치고 찾아갔다. 찾아간 컴터: 클라이언트 컴퓨터
+그 주소는 : 서버 컴퓨터
+
+클라이언트는 브라우저를 타고 들어와서 http://ict03.co.kr 로 들어와서 서버를 찾는다.
+서버에 웹서버가 켜져 있어야 한다.
+웹서버: tomcat선택한 것 -띄워주어야 한다.
+클라이언트->서버: request 
+클라이언트<-서버: response
+
+모듈 > /WebUI -원상복귀
+서버 > 8080 -원상복귀
+다시 실행> http://localhost:8080/WebUI/index.html
+
+클라이언트: 웹브라우저를 통해 접속하는 사람
+server: web server progam(asp/php/jsp-자바)을 돌린다.
+웹서버 역할을 하려면 apache, tomcat을 연동해야 해
+탐캣이 자바를 인식하면서 html은 글자와 이미지를 제공, 화면에 뜨는 애를 보기 위함
+웹서버 프로그램이 필요한 이유: 웹서버 뒤에 데이터베이스가 있는데 
+db에 들은 값을 사용자에게 주거나 저장을 위해 db 연결을 해야해
+db연결을 위해서 프로그램이 필요해
+jsp로 바꾸는 이유는 db연계를 위해서
+우리가 보는 대다수는 db에 들어있는 내용을 끌어다 온 것 ->웹서버 프로그램 필요 -> jsp 필요
+
+html 공부방법: 나중에 읽을 수만 있으면 돼
+프론트엔드: 브라우저가 인식하는 파트
+가급적 무료 템플릿 찾아서 화면 가져다 쓰기
+h1태그: 제목
+p태그: 문단만들기
+읽을 수 있으면 됨. 정리하지 않기
+
+w3 school에서 필요할 때마다 찾아쓰기
+
+asp: ms 계열의 프로그램언어
+요즘 국내에서 많이 없어짐. 정부 프로젝트가 자바베이스라 많이 보편화되어서 jsp(jaba base)가 많다.
+
+프로젝트에서 프로그램 언어가 정해지는 것.
+
+w3 항상 띄어놓기
+full stack: 화면부터 개발까지 담당 (개발은 백엔드)
+	front-end: html/css/js, 웹 클라이언트 
+		js: react.js, next.js, coffe.js, vue.ja 등등 자바스크립트 확장된 애들
+	back-end: 웹 사이트
+
+개발용: localhost = http://127.0.0.1/ (개발하기 위한 ip) 만 쳐도 나오게 하기
+http://192.168.0.39/ 쳐도 나오게! 
+> 여기까지는 네트워크 안켜도 된다. > 이 상태에서 개발할 예정
+
+192.168.0.39 (config ip) 로도 나오는지 확인
+> 네트워크적으로도 해당 서버를 찾아냈다. (강의실 안에서 동작하는 ip = 내부망)
+
+포트 충돌나면 포트번호 100단위 바꿔서 테스팅 하기
+
+http://localhost:8080/WebUI/index.html > 이상태로 개발
+
+기존 wk 변경
+New Java Project - 이름 Review, use default JRE 3번째 체크
+jre eclipse: 이클립스 내장된 jre 를 끌어와서 쓴다.
+
+Review Project 생성 / src에 a_basic 패키지 생성 / Ex_variable 클래스 생성
+
+스트링
+버퍼: 네트워크를 통과할 수 있다. 옛날에 나온거 -> 용량을 많이 차지하므로 빌더 나온듯
+빌더: 네트워크 통과 못함. 요즘 나옴. 
+
+static: 객체랑 별도로 메모리를 관리, 먼저 읽힌다. 
+void 앞에 static 을 붙인다(자바만)
+
+파라미터/매개변수: 인자를 받는 애들
+인자: () 안에 들어가는 변수
+
+자바는 메인함수가 static
+
+a.append(b); -> a+b (+연결연산자)
+파이선, C언어는 new가 있으면 delete가 있는데,
+자바는 new만 있고 delete가 없다. 대신 garbage collector(메모리를 수거하는 쓰레기차)가 있다. 
+★자바의 특성: 
+1) 운영체제에 영향을 받지 않는다. (JVM이 있으면 실행하니까)
+2) garbage collector가 있다. 
+
+회사 서버는 리눅스를 사용
+add함수를 벗어나면서 힙 영역에 있던 애는 무쓸모-> 쓰레기라고 한다.
+
+자바도움말 > 자꾸만 보는 연습하기
+https://docs.oracle.com/javase/8/docs/api/
+
+java.lang > String class
+
+프로그램언어는 0부터, 아닌건 1부터 센다.
+
+주석달고 코딩 읽는 법을 자꾸만 터득하기!거꾸로도! 반복연습하기
+
+문법만 찾아서 복습하기!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+
+window.onload = function(){  //윈도우가 메모리에 올라갔을 때 이벤트 처리
+	
+		var img = document.querySelector('#profile > img')  //querySelector: 누구 밑에 자식으로 찾고 싶어서 셀렉터를 사용한다.
+		
+		//'나는 누구' 글자를 클릭했을 때
+		var h3 = document.querySelector('#btn'); //변수명은 맘대로
+		h3.onclick = function(){
+			img.src = 'images/me.png';
+		}
+		
+		let user = document.getElementsByClassName('user')
+			result.innerHTML = '안녕,'+name[0].value+"님";
+}

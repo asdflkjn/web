@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ko-kr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>9PIXELSTUDIO</title>
+
+<!-- Bootstrap -->
+<link href="../../3_bootstrap_sample/css/nomalize.css" rel="stylesheet">
+<link href="../../3_bootstrap_sample/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../3_bootstrap_sample/css/style.css" rel="stylesheet">
+<link href="../../3_bootstrap_sample/css/animate.css" rel="stylesheet">
+<link href="../../3_bootstrap_sample/css/jquery.fancybox.css" rel="stylesheet">
+
+<!-- cinema contact -->
+<link href="../css/contact.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/contact.js"></script>
+</head>
+
+<body class="page-contact" data-spy="scroll" data-target="#navbar-scroll"
+	data-offset="50">
+	<div class="container-fluid">
+		<div class="container">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar-scroll">
+		        <div class="container">
+		          
+		          <!-- 모바일용 토글 메뉴 + 로고 영역 -->
+		          <div class="navbar-header">
+		            <!-- 모바일 메뉴 버튼 -->
+		            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-1-collapse">
+		              <span class="sr-only">메뉴 열기</span>
+		              <span class="icon-bar"></span>
+		              <span class="icon-bar"></span>
+		              <span class="icon-bar"></span>
+		            </button>
+		            <!-- 로고 -->
+		            <a class="navbar-brand" href="index.html"><img src="../images/common/logo.png" alt="서울아트시네마"> </a>
+		            </div>
+		           
+		             <!-- 네비게이션 메뉴 -->
+		            <div class="collapse navbar-collapse navbar-right navbar-1-collapse">
+		              <ul class="nav navbar-nav">
+		                <li><a href="index.html"> 홈 </a></li>  
+		                <li><a href="about.html"> 서울아트시네마는 </a></li>  
+		                <li><a href="portfolio.html"> 상영작들 </a></li>  
+		                <li><a href="contact.html"> 예매하기 </a></li>                  
+		              </ul>
+		            </div>
+		        </div> <!-- 메뉴 컨테이너 끝 -->
+	      </nav>
+		</div>
+	</div>
+	
+	<div id="contact"></div>
+	<header class="content34">	
+		<!-- Contact 시작 -->
+		<div class="container">
+			<h1>
+				<small>예매하기</small>
+			</h1>
+			<!-- <p>사이트 제작 문의 및 웹 표준 교육에 관해서 질문하는 곳입니다.</p> -->			
+		</div>
+		<!-- end .container -->
+	</header>
+	<div class="container contact">
+		<div class="row">
+			<div class="col-md-7 col-md-offset-2 contact_info wp3 delay-04s">	
+				<form name="frm" class="form-horizontal" role="form" id="ajax-contact-form" action="#">
+					<!-- method="post" action="DBprocess.jsp" -->
+					<div id="home" class='tab-pane active'>
+					
+					 <div class="form-group"> 
+			        	<label for="showdate" class="col-xs-2 col-xs-2 control-label">상영날짜</label>
+						<div class="col-xs-10 col-lg-10">
+							<input type="date" class="form-control" id= "showdate" name="showdate" 
+							min="2025-04-01" max="2025-05-31" step="1" value="sysdate" required/><br/> 
+						</div>
+				    </div>
+
+					<div class="form-group">
+			        	<label for="subject" class="col-xs-2 col-lg-2 control-label">영화명</label>				
+						<div class="col-xs-10 col-lg-10">
+							<select class="form-control" id="subject" name="subject" required>
+								<option value="" disabled selected>영화를 선택하세요</option>
+								<option value="승부">승부</option>
+								<option value="베러맨">베러맨</option>
+								<option value="아마추어">아마추어</option>
+								<option value="로비">로비</option>
+								<option value="야당">야당</option>
+								<option value="드라이브 인 타이페이">드라이브 인 타이페이</option>
+								<option value="거룩한 밤: 데몬 헌터스">거룩한 밤: 데몬 헌터스</option>
+								<option value="사유리">사유리</option>
+							</select>
+						</div>			        		
+					</div>					
+					
+				    
+					 <div class="form-group"> 
+			        	<label for="showtime" class="col-xs-2 col-lg-2 control-label">상영시간</label>
+						<div class="col-xs-10 col-lg-10 ">
+							<select class="form-control" id="showtime" name="showtime" required>
+								<option value="" disabled selected>시간을 선택하세요</option>
+								<option value="10:00">10:00</option>
+								<option value="14:00">14:00</option>
+								<option value="18:00">18:00</option>
+								<option value="20:00">20:00</option>
+								<option value="22:00">22:00</option>
+							</select>
+						</div>
+				    </div>
+				    
+					 <div class="form-group"> 
+				        <label for="name" class="col-xs-2 col-lg-2 control-label">이름</label>
+				        <div class="col-xs-10 col-lg-10">
+							<input type="text" class="form-control required" id="name" name="name"
+								required placeholder="이름 (한글 2~5자)" title="name" pattern="[가-힇]{2,5}" maxlength="10" >
+						</div>
+				    </div> 	
+				    
+				    <div class="form-group"> 
+						<label for="birth" class="col-xs-2 col-lg-2 control-label">생년월일</label>
+						<div class="col-xs-10 col-lg-10">	
+							<input type="text" class="form-control required" id="Birth" name="Birth" placeholder="생년월일 8자리(19810101)" maxlength="8">
+						</div>
+				    </div>
+				    
+				    <div class="form-group"> 
+			        	<label for="userid" class="col-xs-2 col-lg-2 control-label">아이디</label>
+						<div class="col-xs-10 col-lg-10">
+							<input type="text" class="form-control required" id="userid" name="userid"
+								required placeholder="아이디" title="userid">
+						</div>
+				    </div>
+				    
+				    <div class="form-group">  	
+						<label for="password" class="col-xs-2 col-lg-2 control-label">비밀번호</label>
+						<div class="col-xs-10 col-lg-10">
+						<input type="password" class="form-control required" id="password" name="password"
+							required placeholder="비밀번호" title="password" size="20">
+						</div>
+				    </div>
+				    
+				    <div class="form-group"> 
+						<label for="password2" class="col-xs-2 col-lg-2 control-label">비밀번호 확인</label>
+						<div class="col-xs-10 col-lg-10">
+						<input type="password" class="form-control required" id="password2" name="password2"
+							required placeholder="비밀번호 확인" title="password2" size="20">
+						</div>
+				    </div>
+
+				    <div class="form-group"> 
+						<label for="email" class="col-xs-2 col-lg-2 control-label">이메일주소</label>
+						<div class="col-xs-10 col-lg-10">
+						<input type="email" class="form-control required" id="email" name="email"
+							required placeholder="abcd@domain.com" title="email">
+						</div>
+				    </div>
+
+				    <div class="form-group"> 
+						<label for="message" class="col-xs-2 col-lg-2 control-label">문의사항</label>
+						<div class="col-sm-10 col-sm-10">
+							<textarea name="message" class="form-control required"
+								id="message" title="message" placeholder="문의 내용" rows=5></textarea>
+						</div>
+				    </div>
+
+
+					<!-- 					
+				    <div class="form-group">  
+						<label for="gender" class="col-xs-2 col-lg-2 control-label">성별</label>
+						<div class="col-xs-10 col-lg-10">	
+						<select name="developer" selected="selected">
+							<option value="1">자바프로그래머</option>
+							<option value="2">파이썬프로그래머</option>
+							<option value="3">asp프로그래머</option>
+						</select>	
+						</div>
+				    </div>
+					 -->
+					
+					 <div class="form-group"> 
+			        	<label for="pay" class="col-xs-2 col-lg-2 control-label">결제방식</label>
+						<div class="col-xs-10 col-lg-10">
+							<button type="button" class="btn btn-default">카드결제</button>
+							<button type="button" class="btn btn-default">간편결제</button>
+							<button type="button" class="btn btn-default">계좌이체</button>
+						</div>
+				    </div>					
+
+					<div class="form-group">
+						<label name='agree' for="personalinfo" class="col-xs-2 col-lg-2 control-label">개인정보
+							수집 및 이용동의</label>
+						<div class="col-xs-10 col-lg-10">
+							<div class="radio">
+								<label> <input type="radio" name="personalinfo"
+									id="personalinfo" value="option1" checked> 동의합니다
+								</label>
+							</div>
+							<div class="radio">
+								<label> <input type="radio" name="personalinfo"
+									id="personalinfo" value="option2"> 동의하지 않습니다
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label name='agree' for="reserveterms" class="col-xs-2 col-lg-2 control-label">예매 약관 동의</label>
+						<div class="col-xs-10 col-lg-10">
+							<div class="radio">
+								<label> <input type="radio" name="reserveterms"
+									id="reserveterms" value="option1" checked> 동의합니다
+								</label>
+							</div>
+							<div class="radio">
+								<label> <input type="radio" name="reserveterms"
+									id="reserveterms" value="option2"> 동의하지 않습니다
+								</label>
+							</div>
+						</div>
+					</div>
+					
+<!-- 
+							정보수집에 동의를 거부할 수 있으며, 동의하지 않을 경우 예매서비스를 이용하실 수 없습니다.
+
+							<div class="privacy">
+								<div class="t1">[개인정보 수집 및 이용동의]</div>
+								<div class="t2">
+									수집 목적: 영화 예매서비스 제공<br>수집 항목: 이름, 생년월일, 휴대폰번호 <br>비밀번호
+									보유 및 이용기간: 예매 후 6개월
+								</div>
+							</div>
+ -->
+						
+						<div class="form-group">
+							<div class="col-sm-offset-3 col-sm-10">
+								<button type="submit" class="btn btn-default btn-lg">예매하기</button>
+								<button type="reset" class="btn btn-default btn-lg">재설정</button>
+							</div>
+						</div>
+
+
+						</div>
+						<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+						<script
+							src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+						<!-- Include all compiled plugins (below), or include individual files as needed -->
+						<script src="./js/bootstrap.min.js"></script>
+
+
+						<div id="contact"></div>
+				</form>
+
+			</div>
+			
+		</div>
+	</div>
+	<!-- contact_form -->
+
+	<footer class="content3">
+	  <div class="container" style="display: flex; justify-content: space-between; align-items: center; font-size: 14px;">
+	
+	    <!-- 왼쪽: SNS 아이콘 -->
+	    <div class="sns-icons">
+	      <img src="../images/index/square-facebook-brands-solid.svg" alt="facebook" style="width: 24px; margin-right: 10px;">
+	      <img src="../images/index/square-instagram-brands.svg" alt="instagram" style="width: 24px; margin-right: 10px;">
+	      <img src="../images/index/square-twitter-brands.svg" alt="twitter" style="width: 24px;">
+	    </div>
+	    <!-- 오른쪽: 주소 텍스트 -->
+	    <p style="margin: 0; text-align: right;">
+	      (04518) 서울시 중구 정동길 3 경향아트힐 2층(경향신문사)<br>
+	      Tel : (02)741-9782 &nbsp; | &nbsp; E-mail : thequeseoul@naver.com<br>
+	      © 2025 한국시네마테크협의회
+	    </p>
+	
+	  </div>
+	</footer>
+	
+	</div>
+	<!--  fluid container 끝 -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../../3_bootstrap_sample/js/bootstrap.min.js"></script>
+	<script src="../../3_bootstrap_sample/js/bootstrap-hover-dropdown.js"></script>
+	<script src="../../3_bootstrap_sample/js/animatescroll.min.js"></script>
+	<script src="../../3_bootstrap_sample/js/simpleparallax.js"></script>
+	<script src="../../3_bootstrap_sample/js/waypoints.min.js"></script>
+	<script src="../../3_bootstrap_sample/js/jquery.fancybox.js"></script>
+	<script>
+		$('.carousel').carousel()
+		$('.carousel2').carousel({
+			interval : 3000
+		})
+
+		/***************** Waypoints ******************/
+		$('.wp1').waypoint(function() {
+			$('.wp1').addClass('animated fadeInLeft');
+		}, {
+			offset : '75%'
+		});
+		$('.wp2').waypoint(function() {
+			$('.wp2').addClass('animated fadeInUp');
+		}, {
+			offset : '75%'
+		});
+		$('.wp3').waypoint(function() {
+			$('.wp3').addClass('animated fadeInDown');
+		}, {
+			offset : '55%'
+		});
+		$('.wp4').waypoint(function() {
+			$('.wp4').addClass('animated fadeInDown');
+		}, {
+			offset : '75%'
+		});
+		$('.wp5').waypoint(function() {
+			$('.wp5').addClass('animated fadeInRight');
+		}, {
+			offset : '75%'
+		});
+		//*  */
+		$(document).ready(function() {
+			$(".fancybox").fancybox({
+				openEffect : 'none',
+				closeEffect : 'none'
+			});
+		});
+	</script>
+</body>
+</html>

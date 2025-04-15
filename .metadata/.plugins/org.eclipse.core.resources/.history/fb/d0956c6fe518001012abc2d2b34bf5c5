@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%@ page import='basic.*' %> <!-- basic 패키지 안에 모든 클래스를 임포트할거야. -->
+
+<%
+//jsp는 화면만 담당, 디비 연계하는 건 모델단. 자바 클래스를 따로 만들거야
+
+	//1. 화면의 입력값을 얻어와서 VO 객체의 멤버로 담기
+	EmpVO vo = new EmpVO();
+	vo.setEmpno(Integer.parseInt(request.getParameter("empno")));
+	vo.setEname(request.getParameter("ename"));
+	//나머지도 작업
+	vo.setDeptno(request.getParameter("deptno"));
+	vo.setJob(request.getParameter("job"));
+	vo.setSal(request.getParameter("sal"));
+
+	
+	//2. 모델측(VO 객체) DAO의 insert()로 위의 VO를 전송
+	EmpDAO dao = new EmpDAO();
+	dao.insert(vo);
+
+%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> 사원등록 </title>
+</head>
+<body>
+	 성공적으로 입력되었는지 DB에서 확인합니다.
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+// window.onload = function(){	
+		
+  var list = document.getElementById('list');
+  var pic = document.getElementById('pic');
+  var del = document.getElementById('del');
+
+  // 리스트에서 선택(클릭했을 때)
+	list.onclick = function(evt){ //이벤트에 대한 정보가 필요하면 ()안에 변수가 필요
+		var isbn = evt.target.getAttribute('data-isbn'); //눌려진 애의 속성값을 얻어서 isbn이라는 변수에 담을거야
+		//alert(isbn);
+		
+		if(isbn){
+			//<img src='해당경로' height='150' width='100/>
+			var img = document.createElement('img'); //요소를 만들었어
+			img.height = 150;
+			img.width = 100;
+			img.src = 'images/' + isbn + ".jpg";
+			//console.log(img); //객체는 글씨가 아니라서 alert창에 안떠, 객체 만들어진거 확인 후 지워도 됨
+			
+			pic.appendChild(img); //img태그는 인라인 요소라 옆으로 그림이 뜬다
+		
+			
+			
+		}
+	}
+
+  
+  // 삭제 버튼 누르면 pic 아래 자식(img 태그)를 지운다
+  
+  
+  
+//};

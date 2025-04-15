@@ -1,0 +1,9 @@
+@charset "UTF-8";
+footer{
+	background: url(../../3_bootstrap_sample/imgs/slide1_bg.jpg) no-repeat center bottom fixed;
+    background-size: cover;	
+    margin-top:60px;
+}
+footer>div{
+	display: flex; justify-content: space-between; align-items: center; font-size: 14px;
+}

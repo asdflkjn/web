@@ -1,0 +1,10 @@
+window.onload = function(){
+
+		var frm = document.getElementById('frm');
+		var inputs = document.querySelectorAll("input");
+		
+		frm.onsubmit = function(){}
+			
+			var agree = frm.agree; //agree라는 이름으로 객체 생성
+			alert(agree.checked);
+	}

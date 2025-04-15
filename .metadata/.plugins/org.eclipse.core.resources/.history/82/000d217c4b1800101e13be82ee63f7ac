@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+window.onload = function(){
+	/* 
+	document.myForm.txt0.value='안녕';
+	document.myForm['txt1'].value='헬로';
+	document.myForm['txt2'].value='방가';
+	document.myForm.txt3.value='하이';
+	 */
+	
+	for(i=0; i<4; i++){
+		document.myForm['txt'+i].value="헬로우";
+	} 
+	 
+	document.getElementById('btn').onclick = function(){
+		//document.myForm.txt1.value="하이";
+		for(i=0; i<4; i++){
+			document.myFrom['txt'+i].value="안녕";
+		}
+	} 
+}
+
+</script>
+
+</head>
+<body>
+
+<form name="myForm">
+	첫번째: <input type='text' name='txt0'><br/>
+	두번째: <input type='text' name='txt1'><br/>
+	세번째: <input type='text' name='txt2'><br/>
+	네번째: <input type='text' name='txt3'><br/>
+	<input type='button' value='값지정' id='btn'>
+</form>
+
+</body>
+</html>

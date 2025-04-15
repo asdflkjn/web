@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//-------------------------------------------------------------------------
+//  즉시 실행 함수
+//	 - 함수를 변수에 직접 할당하는 것이 아니라 함수의 결과물을 할당하기 위해 즉시 실행 함수를 사용(?)
+//	- 추후에 클로져와 관련
+/* 
+var f = function(num){
+			document.write('num='+num+'<br/>');
+		}
+f(10);
+ */
+/* 
+var f = function(num){
+		document.write('num='+num+'<br/>');
+		return num;
+	}
+var result = f(10);
+document.write('결과:'+result+'<hr/>'); 
+ */
+
+//함수를 선언하자마자 실행해버리는 것 : 즉시실행함수
+/* 
+ var result = function(num){
+		 		document.write('num='+num+'<br/>');
+		 		return num;
+		 	  }(10);
+
+document.write('결과:'+result+'<hr/>'); 
+ */
+
+var byensu = function(num){
+				 /*var func = function(){
+								 --num;
+								 document.wrtie('NUM='+num+'<br/>');
+							 }
+				 return func;*/
+				 
+				 return function(){
+							 --num;
+							 document.write('NUM='+num+'<br/>');
+						 };
+			 }(10);
+			 
+ document.write(byensu+'<br/>');
+ document.write(typeof(byensu)+'<hr/>'); //타입이 함수야.
+ 
+ byensu(); //함수니까 호출
+ byensu();
+ byensu();
+ //함수는 변수값이니까 함수도 리턴값이 될 수 있다. 함수도 리턴이 된다.
+ //func라는 변수명은 한번 선언하고 한번 사용했어
+ 
+
+ 
+ 
+ 
+ 
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

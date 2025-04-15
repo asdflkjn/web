@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>language</title>
+</head>
+<body>
+
+	<table border=2 id='tbl'>
+		<tr>
+			<td class='first'>커피</td>
+			<td>녹차</td>
+		</tr>
+		
+		<tr>
+			<td class='first'>케익</td>
+			<td>빵</td>
+		</tr>
+		
+		<tr>
+			<td class='first'>과자</td>
+			<td>초코렛</td>
+		</tr>
+		
+	
+	</table>
+
+</body>
+</html>

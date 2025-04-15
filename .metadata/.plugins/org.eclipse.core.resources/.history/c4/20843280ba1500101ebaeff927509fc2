@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 변수와 범위</title>
+<script>
+	
+
+// #1. 글로벌 변수와 지역변수
+/* 
+let scope = '글로벌변수';
+function getValue(){
+	let scope = '지역변수';
+	return scope;
+}
+
+document.write('1>'+getValue()); //지역변수
+document.write('2>'+scope); //글로벌변수
+  */
+ 
+// #2. let 명령어 생략시
+/* 
+scope = '글로벌변수'; 
+function getValue(){
+	let scope = '지역변수'; 
+	let test = "테스트";  
+	return scope;
+}
+
+document.write('1>'+getValue()); //지역변수
+document.write('2>'+scope); //글로벌변수
+document.write('3>'+test); //에러
+  */
+
+// #3. 지역변수 선언을 함수 맨 앞에 쓰자
+/* 
+let scope = '글로벌변수';
+function getValue(){
+	let scope = '지역변수';
+	document.write('0>'+scope);  //지역변수1
+	return scope;
+}
+
+document.write('1>'+getValue()); //지역변수2
+document.write('2>'+scope); //글로벌변수
+ */
+/* 
+ 모르겠당
+let scope = '글로벌변수';
+function getValue(){
+	
+	document.write('0>'+scope);  //undefined1
+	let scope = '지역변수';
+	
+	return scope;
+}
+
+document.write('1>'+getValue()); //지역변수2
+document.write('2>'+scope); //글로벌변수
+ */
+
+//#4. 지역변수의 범위 -함수 안에만 적용 //자바는 모든 블럭이 지역변수, js는 함수 안에만 지역변수
+
+if(true){
+	let i = 100;
+}
+document.write('i='+i+'<br/>'); //100
+
+for(let j=0; j<3; j++){} //자바는 for에 들어있는 j가 지역변수
+for(let j=0; j<3; j++){} //js는 j를 전역변수로 취급했다
+document.write('j='+j+'<br/>'); //3
+
+for(let k=0; k<3; k++){} 
+//for(let k=0; k<3; k++){} //let은 동일한 변수명을 못써	
+document.write('k='+k+'<br/>'); //에러
+	
+	
+//#4. 지역변수의 범위 - let은 지역변수가 된다.
+for(let k=0; k<3; k++){} 
+//for(let k=0; k<3; k++){} //let은 동일한 변수명을 못써
+
+document.write('k='+k+'<br/>'); //에러
+
+	
+	
+</script>
+</head>
+
+<body>
+
+  
+ </body>
+</html>

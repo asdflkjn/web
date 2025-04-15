@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 변수와 범위</title>
+<script>
+	
+	// #1. 글로벌 변수와 지역변수
+	/* 
+	var scope = '글로벌변수';
+	function getValue(){
+		var scope = '지역변수';
+		return scope;
+	}
+	
+	document.write('1>'+getValue()); //지역변수
+	document.write('2>'+scope); //글로벌변수
+	 */
+	// #2. var 명령어 생략시
+	
+	scope = '글로벌변수'; //var를 생략하면 지역변수, 글로벌변수 영역이 허물어져
+	function getValue(){
+		var scope = '지역변수'; //scope가 하나니까 덮어버렸어.
+		var test = "테스트";  //var를 안썼기 때문에 전역변수가 된거야
+		return scope;
+	}
+	
+	document.write('1>'+getValue()); //지역변수
+	document.write('2>'+scope); //지역변수
+	document.write('3>'+test); //
+	
+	//결론: var를 꼭 쓰자
+	
+</script>
+</head>
+
+<body>
+
+  
+ </body>
+</html>

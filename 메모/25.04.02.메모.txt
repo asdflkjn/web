@@ -1,0 +1,183 @@
+25.04.02.메모
+
+오전 - css (가볍게) , 오후 - jdbc/java (본격수업)
+
+흰색: #FFFFFF -> 대문자로 쓰는 게 낫다.
+---> x축
+ ㅣ
+ v
+ y축
+repeat-x : x축으로 반복
+fixed left bottom : 왼쪽 바닥을 고정시킨다. 
+solid : 실선, dotted : 점선
+
+-안쪽여백: padding 
+-바깥여백: margin
+-border-radius: 테두리 둥글게
+border-radius 는 요소의 경계를 의미하는 border 와 반지름의 크기를 의미하는 radius 의 합성어
+
+최종 프로젝트는 리액트 사용 , 템플릿을 잘 구입해서 사용하기
+실력을 키우는 데 매진해랑
+
+font: 크기랑 글씨체
+font-size: 크기만
+address .tel: address의 자손 중에 tel이라는 클래스를 갖고 있는 한줄
+li: block요소, 개행이 된다.
+어떤 태그가 개행이 되는지 유무는 반드시 알기
+
+#footer>.footerInner>ul>li{
+	padding: 0px 20px;
+	display: inline;
+}
+<hr/> /* 줄긋기 */
+:hover : 마우스가 올라갔을 때 나갔을 때를 감지해주는 가상 속성. 실제로 존재하지 않는다.
+<address> -> 요소, <span class="addr"> -> addr라는 클래스
+cursor: pointer; : 커서를 갖다대면 손모양으로 나오게
+cursor: help; : 커서를 갖다대면 물음표 모양
+
+head 태그 안에 style 속성을 준다: 
+<style type = "text/css"></style>
+
+table태그: 표 바깥 
+td태그: 표 안쪽
+even: 짝수, odd: 홀수
+CSS: 인덱스를 1부터 센다 -> odd 주면 첫번째부터.
+JS(Javascript): 인덱스를 0부터 센다.
+
+반응형은 만들지 말고 템플릿 이용하기
+
+	display:block			:		 항상 새라인에서 시작하고 옆에 다른 요소 배치 안됨
+											width, height, padding, margin, border 조절 가능
+	display:inline		:		 새라인에서 시작 못하고 옆에 다른 요소와 배치 가능
+											width, height, padding, margin, border 조절 불가능
+	display:inline-block : 	새라인에서 시작 못하고 옆에 다른 요소와 배치 가능
+											width, height, padding, margin, border 조절 가능
+	display:none 		: 화면에서 안보이게
+	display:flex		: 유동적인 레이아웃
+
+
+img태그: display inline 속성 
+div태그: display block 속성 ->강제 개행
+
+st : Ctrl Space 
+inline-block: 개행 안되면서 값도 조절 가능
+
+안보이게
+	display: none;       : 공간도 없애고 안보이게 하고
+	visibility: hidden;  : 공간은 유지하고 안보이게 하고
+방향
+	flex-direction: row; : 가로 배치
+	flex-direction: column; : 세로 배치
+	flex-direction: row-reverse; : 가로 배치를 반대로 바꾼다.
+	flex-direction: column-reverse; : 세로 배치를 반대로 바꾼다.
+
+p.hidden {
+	overflow: hidden;
+}
+-> p 태그 중에서 감추는 방법: 넘치는 부분은 안보이게 할거야.
+	overflow: auto; -> 내용이 넘치면 스크롤바
+	overflow: scroll; -> 무조건 스크롤바
+
+왼쪽 상단이 (0.0) 기준. 
+div>img {position: absolute;} -> 절댓값으로 위치를 기준으로 옮겨지게 한다.
+ㄴleft, top 등등
+
+position: absolute : 진짜 절댓값. 
+position: fixed : 스크롤을 내려도 화면이 고정. 
+
+	text-align: center;  > 가로 가운데
+	line-height: 150px;  > 세로 가운데 (높이와 똑같이 주기)
+	
+	
+	nth-of-type : 부모에 다른 애들이 너무 많을 때
+	:hover : 앞에 애가 마우스에 올라갔을 때
+
+/* border-radius: 40px; */
+	/* border-radius: 0px 20px 40px 100px; */
+	/* border-radius: 20px 40px; /* 20px 40px 20px 40px;  */
+	/*border-radius: 0px 150px 20px; /* 마지막은 2번째 각도에 의해 결정됨 */ 
+	
+top: -20px; = bottom: 20px;
+left / top 의 반대 = right / bottom
+
+
+z-index: 값이 높을수록 위로 보여짐
+
+z-index: -; > 뒤로 가게.
+
+	width: 50%;
+	-webkit-transition-property: width;
+	-webkit-transition-duration: 0.1s;
+	ㄴ크기 비율, 사이즈 조절 소요시간
+
+body {background: #FFFFFF url(../images/new/bg3.jpg) repeat-x fixed left bottom;}
+ㄴ전체 배경 설정
+
+----오후-----
+width는 내용을 중심으로
+float와 clear는 반드시 짝꿍으로 나온다.
+
+<!-- 모바일 반응형으로 만든다면 -->
+<style type="text/css" media="screen and (max-width: 700px)">
+	#left {display: none;}
+	#content {float: left;}
+
+</style>
+
+<!-- 프린트 한다면 -->
+<style type="text/css" media='print'>
+	#header, #footer, #left {display: none;}
+	#content {float:left;}
+	
+	
+
+-------★ JDBC ★-----------
+	
+	드라이버는 클래스, 파일. =그냥 글씨 => 실행하려면 메모리에 올려야 한다.=로딩
+	연결객체를 얻기 위해서 가상통로를 만들거야
+	카트역할 하는애가 전송객체
+	SQL문장을 카트에 실어
+	통로는 닫아
+	
+	connection을 열고 처리하고 닫고 -> 10개의 커넥션을 공유해서 작업하도록
+	
+	업데이트와 딜리트 문장에 where절이 반드시 있어야 돼
+	
+	외부에서 들어오는 것은 오토커밋, 못바꿔
+	127.0.0.1 : 네트워크가 연결 안되어 있어도 내 컴퓨터를 찾을 수 있는 주소
+	
+종류별 포트번호 
+	1521 
+	웹에서 기본 포트: 80
+	탐캣 기본 포트: 8080
+	
+	데이터베이스 내에서 문자열은 '', 자바에서 문자열은 "".
+	키워드는 대문자로, "" 사이에 공백 넉넉하게 주기
+				
+	String sql = "  UPDATE emp  "
+			+ " SET ename='최길동', sal=50000, job='IT' "
+			+ " WHERE empno=1987 ";
+
+SQL
+nvl(comm,0) > null값은 0으로 치환하는 함수	
+	
+자바에서 외부적으로 연결되는 것은 예외처리가 필수!
+
+데이터베이스 커넥션이 오라클에 3개가 있다. ABC사용자가. abc커넥션.
+문제가 생겨서 예외가 발생하면 catch로 빠져. connection이 닫혀야 수행 가능.
+하나가 닫히지 않으면 두개로만 써야돼 > 자원낭비 심한상태
+예외가 있건 없건 관계없이 무조건 처리할 수 있는 구문: finally
+	
+커넥션 꼭 닫기
+전화번호, 학번, 주민번호는 반드시 문자형으로 잡을것(넘버형 말고) -> 고유한 값이므로.
+
+	오라클: ORA-00900 에러번호를 가지고 접속
+	
+웹에서 넘어온 변수와 더불어서 SQL문장을 만든다.	
+	
+EmpInsertPrep/EmpSelectPrep ★ 완전 알기
+	
+	
+	
+	
+	

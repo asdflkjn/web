@@ -1,0 +1,24 @@
+/* contact.css */
+@charset "UTF-8";
+
+
+.page-contact {background-color:#8f9ca1;}
+
+		
+.content34 {
+	background:url('../images/contact/movie3.jpg');	
+	height: 250px;
+}
+
+.container contact {
+	background: #212121;
+}
+
+.container h1 {
+	margin-top: 100px;
+
+}
+
+.required {
+	background: #d9e3e7;
+}

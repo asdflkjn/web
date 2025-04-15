@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 폼 예제 3 </title>
+<script type="text/javascript">
+
+window.onload = function(){
+	
+	document.getElementById('btn').onclick = function(){
+		
+		var myDate = new Date();
+		myDate.setFullYear(frm1.y.value);  //setYear는 두글자 들어감 , 4글자니까 풀이어
+		myDate.setMonth(frm1.m.value -1); //1월은 0이므로 -1 
+		myDate.setDate(frm1.d.value); 
+		
+		alert(myDate);
+		
+		frm1.w.value = myDate.getDay();
+
+		const daysOfWeek = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"]
+		console.log(daysOfWeek[myDate.getDay()]);
+		
+	}
+
+}
+
+</script>
+</head>
+<body>
+
+<hr><hr>
+
+요일을 알아봅시다. <br>
+
+<form name="frm1">
+	<input type="text" name="y" size=4>년 
+	<input type="text" name="m" size=2>월
+	<input type="text" name="d" size=2>일
+	<input type="button" id='btn' value="☞">
+	<input type="text" name="w" size=4>요일입니다.
+</form>
+
+<hr><hr>
+
+
+</body>
+</html>

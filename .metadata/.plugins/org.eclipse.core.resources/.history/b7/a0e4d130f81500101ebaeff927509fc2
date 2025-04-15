@@ -1,0 +1,22 @@
+/* contact.css */
+@charset "UTF-8";
+
+#footer { 
+	height:75px;
+	margin-bottom:15px;
+	background:url('../../images/common/footerbg.gif') repeat-x 0 0;
+}
+
+body {
+	background: #FFFFFF url(../images/new/bg3.jpg) repeat-x fixed left bottom;
+}
+
+		
+.content34 {
+	background:url('../images/contact/movie2.jpg');	
+	height: 400px;
+}
+
+.container>small span {
+	top: 100px;
+}

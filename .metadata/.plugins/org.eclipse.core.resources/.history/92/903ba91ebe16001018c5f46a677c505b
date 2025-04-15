@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+window.onload = function(){
+	
+	var sel = frm.loc;
+	for(let i=0; i<sel.length; i++){
+		sel[i].onclick = function(){
+			parent.newWin.fm.loc.value = this.value;
+		}
+	}
+	
+	
+}
+
+
+</script>
+<title></title>
+</head>
+<body>
+
+<form name='fm'>
+	<input type='text' name='siteResult' id='addr' readonly> <br/><br/>
+	<input type='radio' name='loc' value='가산' >가산<br/>
+	<input type='radio' name='loc' value='판교' >판교<br/>
+	<input type='radio' name='loc' value='부평' >부평
+</form>
+</body>
+</html>

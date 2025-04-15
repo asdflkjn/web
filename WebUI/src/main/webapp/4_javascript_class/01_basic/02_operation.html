@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트의 연산자</title>
+<script type="text/javascript">
+
+//1.  실수형 계산에는 주의 -> 2진수로 변환하여 저장하고 연산하기 때문에 발생 -> 정수로 만들고 계산@
+/* 
+document.write(0.2*3 == 0.6); //false
+document.write(0.2*3); //0.6000000000000001 -> 2진수로 변환해서 계산하다 보니 오류
+//자바스크립트에서는 반드시 정수로 만들고 계산해야 한다.
+document.write(0.2*10*3 == 0.6*10); // true
+document.write(0.2*3*10 == 0.6*10); // false
+ */
+//2.==와 === 차이는?
+/* 		
+var num = 10; //number형
+var str = '10'; //string형
+ */
+//document.write(typeof num); //number
+//document.write(typeof str); //string
+/* 
+if(num == str) document.write('[같다]');  //==값만 비교
+else document.write('[다르다]'); //같다
+
+if(num === str) document.write('[같다2]');  //===데이터 타입과 값을 같이 비교
+else document.write('[다르다2]'); //다르다2
+ */
+
+// 3. 기본형과 참조형
+/* 
+var a = 10;
+var b = 10;
+if(a==b)document.write('같다1');
+else document.write('다르다1'); //같다1
+
+var a = ['java','scipt'];
+var b = ['java','scipt'];
+if(a==b)document.write('같다2'); //값은 주소. 주소값이 서로 다르다.
+else document.write('다르다2'); //다르다2
+
+var a = 'Hello';
+var b = "Hello"; //'', "" 의미가 없다
+if(a==b)document.write('같다3');
+else document.write('다르다3'); //같다3
+ */
+// 4. boolean형 (true/false)
+/* 
+document.write( (true==1)+'<br/>' ) //안에 괄호는 괄호 먼저 시행하라고
+document.write( (1==true)+'<br/>' )
+document.write( (0==true)+'<br/>' )
+document.write( (1==false)+'<br/>' )
+document.write( (0==false)+'<br/>' )
+ */
+//0==false, 1==true
+
+// 5. null과 논리연산자(||, &&)의 조합
+/* 
+const num = null; //값이 없다 자체가 false
+const result = num || '숫자를 입력하세요'; //||: 둘중에 하나만 있어도 결과가 나온다.
+document.write(result+'<br/>'); //숫자를 입력하세요
+
+const num2 = 100;
+const result2 = num2 || '숫자를 입력하세요';
+document.write(result2+'<br/>'); //100
+
+const num3 = null;
+const result3 = num3 && '입력값입니다';
+document.write(result3+'<br/>'); //null
+
+const num4 = 100;
+const result4 = num4 && '입력값입니다';
+document.write(result4+'<br/>'); //입력값입니다, 왼쪽은 자동 true이기 때문에 오른쪽이 결정적인 결정기준이라서 오른쪽이 결과적으로 출력된다.
+
+const num5 = 0;
+const result5 = num5 && '입력값입니다'; 
+document.write(result5+'<br/>'); //0==false이기 때문에 자동으로.
+ */
+//옛날부터 있었는데 떠오르는 문법, vuew/react.js에 많이 등장
+
+// 6. 삼항연산자 -고대부터 있었음, 여기서는 중요! 명확하게 익숙하게 만들기!
+/* 
+var num = 100;
+var result = ((typeof num === 'number') ? num : '숫자를 입력하세요'); //괄호 명확하게 주자. 읽기 편하게
+document.write(result+'<br/>');
+
+var num = '100';
+var result = ((typeof num === 'number') ? num : '숫자를 입력하세요'); //괄호 명확하게 주자. 읽기 편하게
+document.write(result+'<br/>');
+ */
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

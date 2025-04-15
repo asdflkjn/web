@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>9_참고.html</title>
+</head>
+<body>
+
+	<h2 id='btn'>프로그래밍</h2>
+	<ul id='list'>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JS</li>
+	</ul>
+</body>
+</html>

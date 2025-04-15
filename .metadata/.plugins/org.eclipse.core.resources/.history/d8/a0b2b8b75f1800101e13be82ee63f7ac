@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+주문서 <hr>
+
+<form name="frm">
+	<table border='1'>
+		<tr>
+			<th>상품</th>
+			<th>단가</th>
+			<th>주문수량</th>
+		</tr>
+		<tr>
+			<td></td>
+		</tr>
+	
+	</table>
+
+</form>
+
+</body>
+</html>

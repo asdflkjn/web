@@ -1,0 +1,31 @@
+/* about.css */
+.container.about{
+	padding-top:20px;
+	padding-bottom:50px;
+}
+.container.about .row{
+	margin-top:20px;
+}
+.carousel-indicators{
+	display:none !important;
+}
+
+.panel a.collapsed{
+	color:#ff5733;
+}
+.panel-body{
+	color:#555;
+}
+.book{
+	padding-bottom:40px;
+}
+.about-poster{
+	padding-bottom:40px;
+}
+
+.content1 {
+	background: url(../images/common/dance.jpg) no-repeat center top fixed;
+    /* background: url(../imgs/slide1_bg.jpg) no-repeat center top fixed;
+    */
+    background-size: cover;
+}

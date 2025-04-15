@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM에서 노드 검색 방법</title>
+<script type="text/javascript">
+
+  window.onload = function () { //window.onload: 윈도우가 메모리에 올라갔을 때
+	  
+	  /*
+	  var btn = document.getElementById('btn'); //변수 btn이 가리키는 애가 		<input id="btn" type="button" value="버튼" />
+	  btn.onclick = function(){}
+	  */
+	  //베이스는 id로 찾는게 가장 흔한 방법
+	  
+	  document.getElementById('btn').onclick = function(){
+	//		alert('ok'); //버튼이 눌려졌을 때 이벤트가 발생하는지 먼저 확인
+	//	document.getElementById('result'); //<div id="result"></div>
+		let result = document.getElementById('result'); //let result에서 result 대신 다른 이름 써도됨. 헷갈려서 같이 준거임
+		
+	// 1. ID값으로 노드 얻어오기
+			//let name = document.getElementById('name'); 
+			//result.innerHTML = '안녕,'+name.value+"님"; //이름에 값 입력후 버튼 누르면 안녕,홍길동님이라고 뜸
+			
+	// 2. 클래스명으로 노드 얻어오기
+			//let name = document.getElementsByClassName('cname')
+			//result.innerHTML = '안녕,'+name[0].value+"님";
+			// 부트스트랩은 class로만 찾는다. 주의: 배열로만 떨어진다.
+			
+	// 3. 태그명으로 노드 얻어오기 
+			var inputList = document.getElementsByTagName('input'); //포인트
+			//alert(inputList.length); //버튼 클릭시 4개가 나온다.
+			for(var i=0; i<inputList.length; i++){
+				if(inputList[i].type == 'text' && inputList[i].value == ''){
+					alert('각 항목을 입력하세요');
+					return; //제어권 반한, 함수를 통으로 벗어나겠다. /단순히 반복문만 벗어나려면 break
+				}
+			}
+			
+		// 4. 현재위치에서 상대적인 관계로 노드 얻어오기
+
+		/* nodeType 프로퍼티의 반환값
+			1 -	요소 노드
+			2 - 속성 노드
+			3 - 텍스트 노드
+			4 - CDATA 섹션
+			5 - 실제참조 노드
+			6 - 셀제선언 노드
+			7 - 처리명령 노드
+			8 - 코멘트 노드
+			9 - 문서 노드
+			10 - 문서형선언 노드
+			11 - 문서의 단편 (fragment)
+			12 - 기법선언 노드
+		*/
+		
+		// 5. DOM 구조는 아니지만 폼의 요소를 찾는 방법
+
+		
+		
+	}
+  }
+  </script>
+</head>
+
+<body>
+	<!-- 1 -->
+
+		<div id='label'>
+		 이름 : <input type="text" id="name" 	class="cname" name="name" size="15" />
+		 학과 : <input	type="text" id="dept" name="dept" size="15" /> 
+		 학교 : <input 	type="text" id="univ" name="univ" size="15" />
+		 </div>
+		<input id="btn" type="button" value="버튼" />
+		<div id="result"></div>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+package basic;
+
+public class EmpVO {
+
+	private int empno; 		//사번//원래 사번, 학번, 전번, 주민번호 문자열로 잡아. 이건 80년대 만들어진 예문이라 int형
+	private String ename; 	//사원명
+	private int deptno; 	//부서번호
+	private String job; 	//업무
+	private int sal; 		//월급
+	
+	
+	
+	
+}

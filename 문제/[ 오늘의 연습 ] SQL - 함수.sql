@@ -1,0 +1,247 @@
+​
+
+(1) 숫자형 함수
+1-1 사원명, 급여, 월급(급여/12)를 출력하되 월급은 십단위에서 반올림하여 출력
+
+SELECT ename AS "사원명", sal AS "급여", round((sal/12),-2) AS "월급"
+FROM emp;
+
+SELECT ename,sal,round((sal/12),-1) "월급" FROM emp;
+
+1-2 사원명, 급여, 세금(급여의 3.3%)를 원단위 절삭하고 출력
+
+SELECT ename AS "사원명", sal AS "급여", trunc(sal*0.033,-1) AS "세금"
+FROM emp;
+
+SELECT ename,sal,round((sal*0.033),-1)"세금" FROM emp;
+
+(2) 문자형 함수
+2-1 scott의 정보를 사원번호, 성명, 담당업무(소문자) 출력
+
+SELECT empno AS "사원번호", ename AS "성명", lower(job) AS "담당업무"
+FROM emp;
+
+select empno 사원번호, ename 성명, lower(job) 담당업무
+from emp
+where ename= 'scott';
+
+2-2 사원번호, 사원명(첫글자만 대문자), 담당업무(첫글자만 대문자)로 출력
+
+SELECT empno AS "사원번호", initcap(ename) AS "사원명", initcap(job) AS "담당업무"
+FROM emp;
+
+SELECT empno,initcap(ename),initcap(job) FROM emp;
+
+2-3 이름의 첫글자가 ‘K’보다 크고 ‘Y’보다 작은 사원의 정보
+( 사원번호, 이름, 업무, 급여, 부서번호)를 출력하되 이름순으로 정렬
+
+SELECT empno, ename, job, sal, deptno
+FROM emp
+WHERE SUBSTR(ename, 1, 1) > 'K'
+	  AND
+	  SUBSTR(ename, 1, 1) < 'Y'
+ORDER BY ename;
+
+SELECT empno, ename,job,sal,deptno FROM emp
+WHERE ename > 'K'
+AND
+ename < 'Y'
+ORDER BY ename;
+
+2-4 이름이 5글자 이상인 사원들을 출력
+--LENGTH는 순수한 문자열의 길이를 반환, 
+--LENGTHB는 byte단위로 반환해주기 떄문에 한글이 포함되어있는 byte를 반환
+SELECT *
+FROM emp
+WHERE LENGTHB(ename) >= 5;
+
+SELECT ename,LENGTH(ename) 이름길이 FROM emp
+WHERE LENGTH(ename)>=5;
+
+2-5 이름을 15자로 맞추고 글자는 왼쪽에 오른쪽에는 ‘*’로 채운다
+
+SELECT RPAD(ename, 15, '*') AS "이름"
+FROM emp;
+
+SELECT Rpad(ename,15,'*') 이름길이 FROM emp;
+
+2-6 월급은 10자로 맞추고 숫자는 오른쪽에 왼쪽엔 ‘-‘로 채운다
+
+SELECT LPAD(sal, 10, '-')
+FROM emp;
+
+SELECT Lpad(sal,10,'-') FROM emp;
+
+2-7 양쪽 공백을 제거
+--공부 ★
+
+SELECT TRIM('   양쪽 공백을 제거    ')
+FROM emp;
+
+SELECT REPLACE('   양쪽 공백을 제거    ', ' ','')
+FROM emp;
+
+SELECT TRIM(*) 
+FROM emp;
+
+2-8 월급을 숫자에서 ‘영일이삼사오육칠팔구’ 글자로 대체
+
+SELECT TRANSLATE(sal,'0123456789','영일이삼사오육칠팔구') FROM emp;
+
+2-9 월급의 숫자에서 0을 ‘$’로 바꾸어 출력
+
+SELECT REPLACE(sal, 0, '$')
+FROM emp;
+
+SELECT TRANSLATE(sal, 0, '$')
+FROM emp;
+
+(3) 날짜형 함수
+
+3-1 현재까지 근무일 수가 많은 사람 순으로 출력
+
+SELECT *
+FROM emp
+WHERE HIREDATE IS NOT null
+ORDER BY HIREDATE;
+
+SELECT ename,round(sysdate - hiredate) AS 근무일수
+FROM emp
+WHERE HIREDATE IS NOT NULL
+ORDER BY 근무일수 DESC;
+
+SELECT *
+FROM emp
+WHERE HIREDATE IS NOT null
+ORDER BY round(sysdate - hiredate) DESC;
+
+3-2 현재까지 근무일 수가 몇 주 몇 일인가를 출력★
+
+SELECT TRUNC(MONTHS_BETWEEN(SYSDATE, TO_DATE(hiredate, 'YYYY-MM-DD'))) AS "근무일수"
+FROM emp;
+
+SELECT ename, hiredate,
+trunc((sysdate-hiredate+1)/7)"근무주",
+ROUND(mod(sysdate-hiredate+1,7))
+"근무주와 일" FROM emp
+ORDER BY hiredate;
+
+SELECT ename, hiredate
+	   , TRUNC((sysdate-hiredate)/7) AS "근무주"
+	   , ROUND(MOD(sysdate-hiredate, 7)) "근무일"
+FROM emp;
+
+3-3 10번 부서의 사원의 현재까지의 근무 월수를 계산 ★
+
+SELECT ename, hiredate
+		, round(months_between(sysdate,to_date(hiredate,'YYYY-MM-DD'))) 근무월수 
+FROM emp where deptno = 10;
+
+SELECT * FROM emp WHERE deptno = 10;
+
+SELECT to_date(hiredate,'YYYY-MM-DD') FROM emp where deptno = 10; 
+
+SELECT months_between(sysdate,to_date(hiredate,'YYYY-MM-DD')) FROM emp where deptno = 10;
+
+3-4 현재 날짜에서 3개월 후의 날짜 구하기
+
+SELECT TO_char(ADD_MONTHS(sysdate, +3),'YYYY-MM-DD')
+FROM dual;
+
+SELECT add_months(SYSDATE,3) FROM DUAL;
+
+3-5 현재 날짜에서 돌아오는 ‘월’요일의 날짜 구하기
+
+SELECT NEXT_DAY(sysdate, 2)
+FROM dual;
+
+SELECT next_day(sysdate,'월요일') FROM dual;
+
+3-6 현재 날짜에서 해당 월의 마지막 날짜 구하기
+
+SELECT LAST_DAY(sysdate)
+FROM dual;
+
+SELECT last_day(sysdate) FROM dual;
+
+(4) 변환 함수
+
+4-1 입사일자를 ‘1999년 1월 1일’ 형식으로 출력★
+
+SELECT to_char(hiredate, 'YYYY"년 "MM"월 "DD"일"') AS "입사일자"
+FROM emp;
+
+SELECT to_Char(hiredate,'""YYYY"년 "MM"월 "DD"일"') 입사일 FROM emp;
+
+4-2 급여 앞에 $를 삽입하고 3자리 마다 ,를 출력★
+
+SELECT concat('$',TO_CHAR(sal, 'FM999,999')) AS "급여"
+FROM emp;
+
+SELECT ('$'|| TO_CHAR(sal, 'FM99,999')) AS "급여"
+FROM emp;
+
+SELECT to_char(sal,'$999,999,999') FROM emp;
+
+4-3 1981년도에 입사한 사원 검색
+
+SELECT *
+FROM emp
+WHERE TO_CHAR(hiredate, 'YYYY') = '1981';
+
+SELECT ename
+FROM emp
+WHERE to_char(hiredate, 'yyyy') = '1981';
+
+4-4 5월에 입사한 사원 검색
+
+SELECT *
+FROM emp
+WHERE TO_CHAR(hiredate, 'MM') = '05';
+
+SELECT ename
+FROM emp
+WHERE to_char(hiredate, 'mm') = '05';
+
+(5) 조건함수
+
+5-1 부서번호가 10이면 영업부, 20이면 관리부, 30이면 IT부 그 외는 기술부로 출력★
+
+SELECT ename AS "이름", deptno AS "부서번호", 
+	   CASE WHEN deptno=10 THEN '영업부'
+			WHEN deptno=20 THEN '관리부'
+			WHEN deptno=30 THEN 'IT부'
+			ELSE '기술부'
+		END 
+		AS "부서"
+FROM emp;                                                                                      
+
+--decode
+SELECT ename, deptno 
+	   , DECODE(deptno, 10, '영업부', 20, '관리부', 30, 'IT부', '기술부') AS "부서"
+FROM emp;            
+
+5-2 업무(job)이 analyst이면 급여 증가가 10%이고 clerk이면 15%, manager이면 20%인 경우 사원번호, 사원명, 업무, 급여, 급여증가를 출력
+★
+SELECT CASE WHEN job = 'ANALYST' THEN sal*0.1
+FROM emp;
+
+SELECT empno,ename,job,sal
+,CASE WHEN job='ANALYST' THEN sal*1.1
+WHEN job='CLERK' THEN sal*1.15
+WHEN job='MANAGER' THEN sal*1.2
+END "급여증가" FROM emp;
+
+SELECT empno, ename, job, sal
+	   , CASE WHEN job = 'ANALYST' THEN sal*1.1
+	   		  WHEN job = 'CLERK' 	 THEN sal*1.15
+	   		  WHEN job = 'MANAGER' THEN sal*1.2
+	     END
+	   AS "급여증가"
+FROM emp;
+
+--decode
+SELECT empno, ename, job, sal
+	   , DECODE(job, 'ANALYST', sal*1.1, 'CLERK', sal*1.15, 'MANAGER', sal*1.2) AS "급여증가"
+FROM emp;
+

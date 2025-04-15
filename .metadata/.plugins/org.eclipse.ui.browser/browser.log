@@ -1,0 +1,48 @@
+
+4월 11, 2025 20:22:25.178 NEW SESSION
+4월 11, 2025 20:22:25.178 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 11, 2025 20:22:25.339 [23176:12060:0411/202225.338:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 20:23:48.48 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 11, 2025 20:23:48.173 [18080:18872:0411/202348.173:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 20:24:14.415 [18080:18872:0411/202414.415:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 20:25:13.341 [18080:18872:0411/202513.340:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 20:27:06.141 [18080:18872:0411/202706.141:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 20:30:07.751 [18080:18872:0411/203007.751:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 20:32:27.70 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 11, 2025 20:32:27.392 [25532:26252:0411/203227.392:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 20:32:56.789 [25532:26252:0411/203256.789:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 20:33:48.812 [25532:26252:0411/203348.812:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 20:35:15.57 [25532:26252:0411/203515.057:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 20:37:08.837 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 11, 2025 20:37:09.48 [21936:1792:0411/203709.048:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 20:37:30.115 [21936:1792:0411/203730.114:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 20:38:19.115 [21936:1792:0411/203819.113:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 20:40:03.732 [21936:1792:0411/204003.732:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 20:42:47.574 [21936:1792:0411/204247.574:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 20:49:54.229 [21936:1792:0411/204954.229:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 20:55:46.189 [21936:16580:0411/205546.188:ERROR:interface_endpoint_client.cc(725)] Message 1 rejected by interface blink.mojom.WidgetHost
+4월 11, 2025 21:00:08.294 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 11, 2025 21:00:08.425 [26116:3000:0411/210008.425:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 21:00:38.76 [26116:3000:0411/210038.075:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 21:01:37.299 [26116:3000:0411/210137.298:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 21:03:03.113 [26116:3000:0411/210303.113:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 11, 2025 21:06:10.541 [26116:3000:0411/210610.541:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+
+4월 13, 2025 20:57:30.558 NEW SESSION
+4월 13, 2025 20:57:30.558 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 13, 2025 20:57:30.792 [13420:13220:0413/205730.792:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 13, 2025 20:57:53.357 [13420:13220:0413/205753.357:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 13, 2025 20:58:45.926 [13420:13220:0413/205845.925:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 13, 2025 21:00:36.732 [13420:13220:0413/210036.732:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 13, 2025 21:04:24.227 [13420:13220:0413/210424.226:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 13, 2025 21:10:59.515 [13420:13220:0413/211059.515:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+
+4월 15, 2025 11:08:58.513 NEW SESSION
+4월 15, 2025 11:08:58.513 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 15, 2025 11:08:58.634 [27304:24216:0415/110858.633:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 15, 2025 11:09:25.813 [27304:24216:0415/110925.813:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 15, 2025 11:10:11.142 [27304:24216:0415/111011.142:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 15, 2025 11:11:42.869 [27304:24216:0415/111142.868:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 15, 2025 11:13:18.141 [27304:19516:0415/111318.141:ERROR:interface_endpoint_client.cc(725)] Message 1 rejected by interface blink.mojom.WidgetHost
+4월 15, 2025 11:15:26.991 [27304:24216:0415/111526.990:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 15, 2025 11:22:03.333 [27304:24216:0415/112203.333:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT

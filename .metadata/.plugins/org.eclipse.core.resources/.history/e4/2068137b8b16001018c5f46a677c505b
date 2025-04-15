@@ -1,0 +1,19 @@
+/* contact.css */
+@charset "UTF-8";
+/* 
+.page-contact {background-color:#8f9ca1;}
+		
+
+.container.contact {
+	background: #f8f8f8;
+} */
+
+.required {
+	background: white;
+}
+.content3{
+	background-image: url(../images/common/city.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 180px;
+}

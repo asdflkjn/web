@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>폼 예제 2</title>
+</head>
+<script type="text/javascript">
+
+window.onload = function(){	
+	
+	// 'up' 버튼 눌렀을 때 ok버튼 나오게 하기
+	document.querySelector('#up').onclick = function(){ 
+		//alert('ok');
+		var idx = frm.play.selectedIndex;
+		//console.log(idx);
+		
+		var optSel = frm.play.options;
+		
+		if(idx>0){
+			var temp = optSel[idx].text;//현재 선택된 옵션의 텍스트를 변수에 저장
+			//console.log(temp);
+			optSel[idx].text = optSel[idx-1].text; //현재 옵션의 텍스트를 바로 위에 있는 옵션 텍스트로 바꾸기
+			optSel[idx-1].text = temp; //위의 옵션 텍스트를 바로 위에 있는 텍스트로 바꾸기 - 두 옵션의 텍스트가 서로 바뀜
+			optSel[idx-1].selected = true;	//위쪽 옵션을 선택된 상태로 설정
+		}// 업버튼을 클릭하면 현재 선택된 항목이 한 칸 위로 올라가는 효과, 텍스트가 서로 바뀌고, 위쪽 옵션이 선택 상태가 된다.
+		
+	// 'down' 버튼 눌렀을 때 ok버튼 나오게 하기
+	document.querySelector('#down').onclick = function(){ 
+		//alert('ok');
+		var idx = frm.play.selectedIndex;
+		//console.log(idx);
+		
+		var optSel = frm.play.options; //optSel 변수 정의, optSel은 <select> 요소(드롭다운 메뉴)의 모든 옵션들을 가져오는 변수, 
+		//즉, optSel은 옵션들의 배열
+		
+		//- idx는 현재 선택된 옵션의 인덱스를 나타내요.
+		//- optSel.length-1은 마지막 옵션의 인덱스를 의미합니다.
+		//- 이 조건은 "현재 선택한 옵션이 마지막 옵션인지"를 확인합니다.
+		if(idx === optSel.length-1){
+			var temp = optSel[idx].text;
+			//console.log(temp);
+			optSel[idx].text = optSel[0].text;
+			optSel[0].text = temp;
+			optSel[0].selected = true;
+		}else {	//마지막 옵션이 아닐 때의 동작
+			//- 선택된 옵션이 마지막이 아니라면:- 현재 선택된 옵션의 텍스트를 임시 변수 temp에 저장합니다.
+			//- 현재 선택된 옵션의 텍스트와 바로 다음 옵션의 텍스트를 교환합니다.
+			//- 바로 다음 옵션을 선택된 상태로 설정합니다.
+			var temp =optSel[idx].text;
+			optSel[idx].text = optSel[idx+1].text;
+			optSel[idx+1].text = temp;
+			optSel[idx+1].selected = true;		
+		}
+		/* 
+		전체적으로 이 코드는:
+			- 드롭다운 메뉴에서 현재 선택된 옵션을 다음 옵션으로 이동시키거나,
+			- 마지막 옵션을 선택했을 경우 첫 번째 옵션과 교환하는 동작을 수행해요.
+ */
+	}
+	
+	
+	
+	
+	
+}
+}
+</script>
+<body>
+
+	내가 제일 좋아하는 놀이 순서대로 한다면
+	<br>
+
+	<form name="frm">
+		<select name="play" size="8">
+			<option selected>숨쉬기</option>
+			<option>밥먹기</option>
+			<option>그냥있기</option>
+			<option>잠자기</option>
+			<option>술먹기</option>
+			<option>멍때리기</option>
+		</select> 
+		<br> <input type="button" id='up' value="▲"><br>
+		<br> <input type="button" id='down' value="▼"><br>
+		<br>
+	</form>
+
+</body>
+</html>

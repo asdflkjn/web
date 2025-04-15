@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 리스너 연결 </title>
+
+<script type="text/javascript">
+
+	요소.addEventListener('이벤트',함수명);
+// 윈도우=화면이 준비되었을 때(로딩될때=화면이 뜰때)=문서가 준비될 때 
+window.onload = function(){
+	
+	var bbb = document.getElementById('btn'); //bbb라는 애로 눌러 버튼을 찾아가겠다.
+	
+	bbb.addEventListener('click', function(){ //bbb가 클릭했을 떄 함수를 연결해줄거야
+		alert('이벤트 확인6');
+	} );
+}	
+	
+
+</script>
+
+ </head>
+ <body>
+	<input type='button' value='눌러'  id='btn' />
+ </body>
+</html>

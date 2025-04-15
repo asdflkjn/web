@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 변수와 범위</title>
+<script>
+	
+	// #1. 글로벌 변수와 지역변수
+	/* 
+	var scope = '글로벌변수';
+	function getValue(){
+		var scope = '지역변수';
+		return scope;
+	}
+	
+	document.write('1>'+getValue()); //지역변수
+	document.write('2>'+scope); //글로벌변수
+	 */
+	 
+	 //#2. var 명령어 생략시
+	/* 
+	scope = '글로벌변수'; //var를 생략하면 지역변수, 글로벌변수 영역이 허물어져
+	function getValue(){
+		scope = '지역변수'; //scope가 하나니까 덮어버렸어.
+		var test = "테스트";  //var를 안썼기 때문에 전역변수가 된거야
+		return scope;
+	}
+	
+	document.write('1>'+getValue()); //지역변수
+	document.write('2>'+scope); //지역변수
+	document.write('3>'+test); //에러
+	  */
+	//결론: var를 꼭 쓰자
+	
+	// #3. 지역변수 선언을 함수 맨 앞에 쓰자
+/* 	
+	var scope = '글로벌변수';
+	function getValue(){
+		var scope = '지역변수';
+		document.write('0>'+scope);  //지역변수1
+		return scope;
+	}
+	
+	document.write('1>'+getValue()); //지역변수2
+	document.write('2>'+scope); //글로벌변수
+	 */
+	
+	var scope = '글로벌변수';
+	function getValue(){
+		
+		document.write('0>'+scope);  //undefined1
+		var scope = '지역변수';
+		
+		return scope;
+	}
+	
+	document.write('1>'+getValue()); //지역변수2
+	document.write('2>'+scope); //글로벌변수
+	 
+	//결론: var를 꼭 쓰고 선언을 앞에다 두는 습관!
+	
+	//#4. 지역변수의 범위 -함수 안에만 적용 //자바는 모든 블럭이 지역변수, js는 함수 안에만 지역변수
+	
+	if(true){
+		var i = 100;
+	}
+	document.write('i='+i+'<br/>'); //100
+	
+	for(var j=0; j<3; j++){} //자바는 for에 들어있는 j가 지역변수
+	for(var j=0; j<3; j++){} //js는 j를 전역변수로 취급했다
+	document.write('j='+j+'<br/>');
+	
+	for(let k=0; k<3; k++){} 
+	//for(let k=0; k<3; k++){} //let은 동일한 변수명을 못써	
+	document.write('k='+k+'<br/>'); //에러
+	
+</script>
+</head>
+
+<body>
+
+  
+ </body>
+</html>

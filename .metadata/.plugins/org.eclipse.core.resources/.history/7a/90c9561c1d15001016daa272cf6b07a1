@@ -1,0 +1,8 @@
+window.onload=function(){
+alert('OK');
+ var tbl = document.getElementById('tbl');
+ list.onclick = function(evt){ 
+		var price = evt.target.getAttribute('data-price');
+		
+}
+}

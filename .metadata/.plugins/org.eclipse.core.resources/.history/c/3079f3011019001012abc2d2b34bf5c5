@@ -1,0 +1,103 @@
+/**
+ * 맨날맨날 어떤애를 찾아서 뭘할까 하는거야
+ */
+
+ $(function(){
+	 
+	// 1.[감추기]버튼이 클릭했을 때 이미지 사라지게
+	$('#hideButton').click(function(){
+		//alert('ok'); //여까지 하고 html 확인
+		$('#intro > img').fadeOut(1000);
+	});
+
+	// 2. [보이기] 버튼이 클릭했을 때 이미지 보이게
+	$('#showButton').click(function(){
+		$('#intro > img').fadeIn(1000);
+	});
+
+	// 3. [감추기/보이기] 버튼이 클릭했을 때 toggle(안보이면 보이게, 보이면 안보이게 반대로 왔다갔다)하기
+	/*
+	$('#toggleButton').click(function(){
+		//$('#intro > img').fadeOut(1000).fadeIn(1000);
+		$('#intro > img').fadeToggle(1000); //fadeToggle: fadeOut, fadeIn 짝꿍으로 만들어주는 애
+	});
+	*/
+	$('#toggleButton').click(function(){ //아이디가 토글 버튼인 애를 찾아서 클릭 이벤트를 걸었다.
+		let img = $('#intro > img');
+		
+		if(img.is(':visible')){
+			img.fadeOut(1000);
+			$(this).val('보이기'); 
+		}else{
+			img.fadeIn(1000);
+			$(this).val('감추기');//버튼의 글씨를 감추기로 바꾸도록 하겠습니다.
+		}
+	});
+	
+	//테이블의 짝수번째 줄에 CSS의 table_striping 클래스 추가
+	//$('table.data>tbody>tr:nth-child(even)').addClass('table_striping');
+	//$('#celebs > table > tbody > tr:even').addClass("table_striping");
+	
+	//테이블에 줄에 마우스 올라갔을 때 CSS의 td_mouseover 클래스 추가
+	//마우스 나가면 해당 클래스 제거
+	//	-mouseenter/mouseleave
+	//	-mouseover/mouseout
+	//	-hover
+	
+	$('#celebs > table > tbody > tr').mouseenter(function(){
+		$(this).addClass("td_mouseover");
+	}) 
+	/*
+	$('#toggleButton').click(function(){ //아이디가 토글 버튼인 애를 찾아서 클릭 이벤트를 걸었다.
+	let img = $('#intro > img');
+	
+	if(img.is(':visible')){
+		img.fadeOut(1000);
+		$(this).val('보이기'); 
+	}else{
+		img.fadeIn(1000);
+		$(this).val('감추기');
+	
+	tbody
+
+$(function(){
+
+	var h = $('celebs tbody');
+
+	h.click(function(){
+		h.text('클릭하면 내용이 바뀝니다');
+	})
+
+	//mouseenter <-> mouseleave : 이 이벤트에서 글씨 바꾸기
+	h.mouseenter(function(){
+		h.text('마우스가 들어옴');
+	})
+
+	h.mouseleave(function(){
+		h.text('마우스가 나감');
+	})
+
+	h.hover(function(){
+		h.css({'border':'2px solid green'})
+	}, function(){
+		h.css({'border':'3px dashed red'})
+	});
+
+	var stu = $('#student');
+
+	var n = stu.find('#name');
+	n.css({'background':'#12AB09' 
+			, 'color':'red'
+			, 'font-size':'25px'
+	});
+*/
+})
+	
+	
+
+
+ 
+ 
+
+
+ 

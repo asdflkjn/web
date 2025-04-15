@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+
+ window.onload = function(){
+		 alert('OK');
+	 
+	 var td = document.querySelector('#tbl>td');
+	 td.onclick = function(){
+	 }
+	 
+	 
+	 
+ }

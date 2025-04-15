@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="ko-kr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>서울아트시네마</title>
+
+<!-- Bootstrap -->
+<link href="../../3_bootstrap_sample/css/nomalize.css" rel="stylesheet">
+<link href="../../3_bootstrap_sample/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="../../3_bootstrap_sample/css/style.css" rel="stylesheet">
+<link href="../../3_bootstrap_sample/css/animate.css" rel="stylesheet">
+<link href="../../3_bootstrap_sample/css/jquery.fancybox.css"
+	rel="stylesheet">
+
+<!-- cinema contact -->
+<link href="../css/portfolio.css" rel="stylesheet">
+<script type="text/javascript" src="../js/portfolio.js"></script>
+
+</head>
+<body id="home" data-spy="scroll" data-target="#navbar-scroll"
+	data-offset="50">
+	<div class="container-fluid">
+		<div class="container">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation"
+				id="navbar-scroll">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target=".navbar-1-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html"><img src="../images/common/logo.png" alt="서울아트시네마"> </a>
+            </div>
+           
+             <!-- 네비게이션 메뉴 -->
+            <div class="collapse navbar-collapse navbar-right navbar-1-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html"> 홈 </a></li>  
+                <li><a href="about.html"> 서울아트시네마는 </a></li>  
+                <li><a href="portfolio.html"> 상영작들 </a></li>  
+                <li><a href="contact.html"> 예매하기 </a></li>                  
+              </ul>
+            </div>
+				</div>
+		</div>
+		<!-- /.navbar-collapse -->
+		</nav>
+	</div>
+
+	<div id="portfolio"></div>
+	<!-- 포트폴리오 시작 -->
+	<div class="content2">
+		<header>
+			<div class="container">
+				<h1>
+					<small>무비차트</small>
+				</h1>
+				<p>현재 상영작 및 상영예정작</p>
+			</div>
+			<!-- end .container -->
+		</header>
+	</div>
+	<div class="container portfolio  wp4 delay-05s">
+		<h2 class="sans">현재상영작</h2>
+		<div id="carousel-generic" class="carousel2 slide">
+			<div class="carousel-inner">
+				<div class="item active">
+					<div class="row">
+						<!-- 슬라이드 one -->
+						<div class="col-xs-3 col-md-3">
+							<div class="thumbnail site" id="poster1">
+								<a class="fancybox" rel="gallery1"
+									href="../images/portfolio/battle.jpg"><img
+									src="../images/portfolio/battle.jpg" alt="..."></a>
+								<div class="caption">
+									<h4>승부</h4>
+									<p>세계 최고 바둑 대회의 우승자가 된 조훈현. 제자에게 패배를 당하고 만 뒤 충격에 사로잡힌다. 그는
+										다시 정상의 자리를 탈환할 수 있을까?</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-3 col-md-3">
+							<div class="thumbnail site" id="poster2">
+								<a class="fancybox" rel="gallery1"
+									href="../images/portfolio/betterman.jpg"><img
+									src="../images/portfolio/betterman.jpg" alt="..."></a>
+								<div class="caption">
+									<h4>베러맨</h4>
+									<p>영국의 천재 가수 로비, 그의 파란장만한 인생을 그린 일대기</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-3 col-md-3">
+							<div class="thumbnail site" id="poster3">
+								<a class="fancybox" rel="gallery1"
+									href="../images/portfolio/amateur.jpg"><img
+									src="../images/portfolio/amateur.jpg" alt="..."></a>
+								<div class="caption">
+									<h4>아마추어</h4>
+									<p>어느 날 사랑하는 아내가 죽었다. 내가 소속된 CIA는 침묵했고 진실은 묻혔다. 4월 9일, 복수를
+										위한 설계가 시작된다.</p>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-xs-3 col-md-3">
+							<div class="thumbnail site" id="poster4">
+								<a class="fancybox" rel="gallery1"
+									href="../images/portfolio/lobby.jpg"> <img
+									src="../images/portfolio/lobby.jpg" alt="...">
+								</a>
+								<div class="caption">
+									<h4>로비</h4>
+									<p>"더럽게 싸움을 걸면, 어떻게 더럽게 싸우죠?" 한날 한시 각자의 목적을 위해 모인 로비팀들, 이들의
+										진흙탕 로비가 펼쳐진다!</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 슬라이드 one end -->
+				</div>
+				<div class="item">
+					<div class="row">
+						
+				</div>
+			</div>
+		</div>
+		<h2 class="sans">상영예정작</h2>
+		<div class="row">
+			<div class="col-xs-3 col-md-3">
+				<div class="thumbnail site" id="poster5">
+					<a class="fancybox" rel="gallery2"
+						href="../images/portfolio/yadang.jpg"> <img
+						src="../images/portfolio/yadang.jpg" alt="">
+					</a>
+				<div class="caption">
+					<h4>야당</h4>
+					<p>대한민국 마약 수사의 뒷거래, 모든 것은 야당으로부터 시작된다!</p>
+				</div>
+				</div>
+			</div>
+			<div class="col-xs-3 col-md-3">
+				<div class="thumbnail site" id="poster6">
+					<a class="fancybox" rel="gallery2"
+						href="../images/portfolio/taipei.jpg"> <img
+						src="../images/portfolio/taipei.jpg" alt="">
+					</a>
+				<div class="caption">
+					<h4>드라이브 인 타이페이</h4>
+					<p>타이페이의 도심을 뒤흔드는 폭발적 카체이싱! 목숨을 건 브레이크 없는 추격전이 시작된다! </p>
+				</div>
+				</div>
+			</div>
+			<div class="col-xs-3 col-md-3">
+				<div class="thumbnail site" id="poster7">
+					<a class="fancybox" rel="gallery2"
+						href="../images/portfolio/holynight.jpg"> <img
+						src="../images/portfolio/holynight.jpg" alt="">
+					</a>
+				<div class="caption">
+					<h4>거룩한 밤: 데몬 헌터스</h4>
+					<p>바우(마동석), 샤론(서현), 김군(이다윗)이 악의 무리를 처단하는 오컬트 액션</p>
+				</div>
+				</div>
+			</div>
+			<div class="col-xs-3 col-md-3">
+				<div class="thumbnail site" id="poster8">
+					<a class="fancybox" rel="gallery2"
+						href="../images/portfolio/sayuri.jpg"> <img
+						src="../images/portfolio/sayuri.jpg" alt="">
+					</a>
+				<div class="caption">
+					<h4>사유리</h4>
+					<p>꿈에 그리던 집으로 이사 온 카미키 가족. 기괴한 웃음소리와 함께 가족들이 차례로 죽음을 맞이한다.</p>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- portfolio end-->
+
+
+	
+
+	</div>
+	<!--  fluid container 끝 -->
+	<footer class="content3">
+  	<div class="container" style="display: flex; justify-content: space-between; align-items: center; font-size: 14px;">
+
+	    <!-- 왼쪽: SNS 아이콘 -->
+	    <div class="sns-icons">
+	      <img src="../images/index/square-facebook-brands-solid.svg" alt="facebook" style="width: 24px; margin-right: 10px;">
+	      <img src="../images/index/square-instagram-brands.svg" alt="instagram" style="width: 24px; margin-right: 10px;">
+	      <img src="../images/index/square-twitter-brands.svg" alt="twitter" style="width: 24px;">
+	    </div>
+	    <!-- 오른쪽: 주소 텍스트 -->
+	    <p style="margin: 0; text-align: right;">
+	      (04518) 서울시 중구 정동길 3 경향아트힐 2층(경향신문사)<br>
+	      Tel : (02)741-9782 &nbsp; | &nbsp; E-mail : thequeseoul@naver.com<br>
+	      &copy; 2025 한국시네마테크협의회
+	    </p>
+	
+	  </div>
+	</footer>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../../3_bootstrap_sample/js/bootstrap.min.js"></script>
+	<script src="../../3_bootstrap_sample/js/bootstrap-hover-dropdown.js"></script>
+	<script src="../../3_bootstrap_sample/js/animatescroll.min.js"></script>
+	<script src="../../3_bootstrap_sample/js/simpleparallax.js"></script>
+	<script src="../../3_bootstrap_sample/js/waypoints.min.js"></script>
+	<script src="../../3_bootstrap_sample/js/jquery.fancybox.js"></script>
+	<script>
+/*        $('.carousel').carousel()
+       $('.carousel2').carousel({interval: 3000 }) 
+*/
+        //***************** Waypoints ******************
+          $('.wp1').waypoint(function() {
+            $('.wp1').addClass('animated fadeInLeft');
+          }, {
+            offset: '75%'
+          });
+          $('.wp2').waypoint(function() {
+            $('.wp2').addClass('animated fadeInUp');
+          }, {
+            offset: '75%'
+          });        
+          $('.wp3').waypoint(function() {
+            $('.wp3').addClass('animated fadeInDown');
+          }, {
+            offset: '55%'
+          });
+          $('.wp4').waypoint(function() {
+            $('.wp4').addClass('animated fadeInDown');
+          }, {
+            offset: '75%'
+          });
+          $('.wp5').waypoint(function() {
+            $('.wp5').addClass('animated fadeInRight');
+          }, {
+            offset: '75%'
+          });
+
+     /*  $(document).ready(function() {
+        $(".fancybox").fancybox({
+          openEffect  : 'none',
+          closeEffect : 'none'
+        });
+      }); */
+ 
+
+    </script>
+</body>
+</html>

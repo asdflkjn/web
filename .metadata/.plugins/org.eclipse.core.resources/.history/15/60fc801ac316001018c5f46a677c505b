@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 우리사이트 회원가입</title>
+
+<script type="text/javascript">
+
+
+window.onload = function(){
+
+	
+		//9_sub.html 창을 열기
+/* 
+		var winHeight = 400;
+		var winWidth = 480;
+		
+		var topPos = (window.screen.height-winHeight)/2;
+		var leftPos = (window.screen.width-winWidth)/2;
+	 */
+		var winObj = window.open('9_sub.html','newWin'
+				, 'width=480 height=400'); 
+				//, `width=${winWidth}, height=${winHeight}, top=${topPos}, left=${leftPos}`);
+		
+		var sel = frm.chooseSite;
+			sel.onchange = function(){
+				winObj.fm.siteResult.value = this.value;
+			}
+}
+</script>
+</head>
+<body>
+<form name="frm">
+		<select name="chooseSite">
+			<option name="site" value="서울시">서울시</option>
+			<option name="site" value="성남시">성남시</option>
+			<option name="site" value="인천시">인천시</option>
+		</select><br/><br/>
+		<input type='text' name='locResult' id='addr' readonly> 
+</form>
+
+
+</body>
+</html>

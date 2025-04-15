@@ -1,0 +1,49 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%@ page import='basic.*' %>    
+    
+<%
+	int empno = Integer.parseInt(request.getParameter("sabun"));
+	EmpDAO dao = new EmpDAO();
+	EmpVO  result = dao.selectByPK(empno);
+
+	// 이전화면 폼에서 넘겨받는 값	
+
+	EmpVO vo = new EmpVO();
+	vo.setEname(user);
+	vo.setEmpno( Integer.parseInt(pass));
+	
+	// user, password가 같을 때 로그인 성공, 그렇지 않으면 로그인 실패
+	if( dao.loginCheck(vo) ){
+		// #2. 세션에 "id"라는 이름에 변수 user 값을 저장
+		session.setAttribute("id", user);
+		
+		// #1. 로그인 성공하면 바로 MainPage.jsp를 요청
+		response.sendRedirect("MainPage.jsp");  //리다이렉팅. 
+		
+	} else {
+
+		// #1. 로그인에 실패하면 바로 LoginForm.jsp을 요청
+		response.sendRedirect("LoginForm.jsp");
+	}				
+	
+	
+%>    
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	사원명  : <%= result.getEname()  %> <br/>
+	월급 	  : <%= result.getSal()    %> <br/>
+	업무	  : <%= result.getJob()    %> <br/>
+	부서번호 : <%= result.getDeptno() %> <br/>
+	
+	
+</body>
+</html>

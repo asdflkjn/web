@@ -1,0 +1,64 @@
+/* portfolio.css */
+
+.site {
+    height: 540px;
+}
+
+.site:hover{
+	margin-right: 80px;
+	margin-bottom: 60px;
+	width: 120%;
+	height: 120%;
+	-webkit-transition-property: width, height;
+	transition-property: width, height;
+	-webkit-transition-duration:10s;
+	transition-duration:10s;
+	
+}
+
+#poster1{
+	position: relative;
+	z-index: 9003;
+}
+
+#poster2{
+	position: relative;
+	z-index: 9002;
+}
+
+#poster3{
+	position: relative;
+	z-index: 9001;
+}
+
+#poster4{
+	position: relative;
+	z-index: 9000;
+}
+
+#poster5{
+	position: relative;
+	z-index: 4;
+}
+
+#poster6{
+	position: relative;
+	z-index: 3;
+}
+
+#poster7{
+	position: relative;
+	z-index: 2;
+}
+
+#poster8{
+	position: relative;
+	z-index: 1;
+}
+
+.content2{
+	background-image: url(../images/portfolio/river.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 180px;
+}

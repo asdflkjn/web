@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>9_참고.html</title>
+
+<script type="text/javascript">
+window.onload = function(){
+	var items = document.querySelectorAll('#list > li');
+	
+	for(var i=0; i<items.length; i++){
+		items[i].onclick=function(){ 
+		//items[i] - i가 0이면 <li>HTML</li>, 1이면 <li>CSS</li>, 2면 <li>JS</li> 
+			//alert('ok')
+			//alert(items[i].innerHTML); 안됨
+			//alert(this.innerHTML); 위에랑 같은말
+			alert(i);
+		}
+	}
+}
+	
+	
+</script>
+
+</head>
+<body>
+
+	<h2 id='btn'>프로그래밍</h2>
+	<ul id='list'>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JS</li> 
+	</ul>
+</body>
+</html>

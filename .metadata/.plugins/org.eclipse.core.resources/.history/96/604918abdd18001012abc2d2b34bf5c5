@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+
+<% 
+/* 
+String name = request.getParameter("name");
+String gender =  request.getParameter("gender");
+String occupation =  request.getParameter("occupation");
+String hobby =  request.getParameter("hobby");
+ */
+String[0] = request.getParameterValues("name");
+String gender =  request.getParameter("gender");
+String occupation =  request.getParameter("occupation");
+String hobby =  request.getParameter("hobby");
+
+%>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>폼의 입력값 넘겨받아 처리</h2>
+	입력한 이름 : <%= name %> <br/>
+	입력한 성별 : <%= gender %> <br/>
+	입력한 직업 : <%= occupation %> <br/>
+	입력한 취미 : <%= hobby %> <br/>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+주문서 <hr>
+
+<form name="frm">
+	<table border='1'>
+		<tr>
+			<th>상품</th>
+			<th>단가</th>
+			<th>주문수량</th>
+		</tr>
+		<tr>
+			<td>망고</td>
+			<td>4000원</td>
+			<td>
+				<select name="mango" data-price='4000'>
+					<option>0</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+				</select> 뭉치
+			</td>
+		</tr>
+	
+	</table>
+
+</form>
+
+</body>
+</html>

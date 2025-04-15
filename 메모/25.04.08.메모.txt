@@ -1,0 +1,160 @@
+25.04.08.메모
+
+브라우저가 구동해서 작업하는 거: 프론트엔드 -자바스크립트 확장판이 많다
+서버에서: 백엔드 -자바 베이스
+
+정수로 만들자
+
+향상된 for문은 집합인 경우에만
+
+배열 만드는 방법>
+배열을 뜻하는 []
+new Array()
+
+이해안되면 지피티 쓰지 말도록
+
+스택과 큐의 차이: 자료구조, 데이터 처리 방법 -이론베이스의 가장 기초
+자료구조와 알고리즘에 대한 이해-10년 되면 쓸데가 있다.
+
+큐: 선착순, FIFO, first in first out, 먼저 들어간게 먼저 나온다.
+스택: LIFO, last in first out, 맨 나중에 들어간 게 먼저 나온다.
+
+daum - naver - google
+goole 다음에 naver: 스택 / daum: 큐
+
+자바는 스택/큐가 따로 있어서 거기에 만들어주면 돼
+js는 구조를 만들어준다.
+구조>
+.push
+pop: 스택 : 마지막 먼저 튀어나와
+shift: 큐 : 처음 먼저 튀어나와
+
+배열이 나오면 무조건 for문(반복문)
+3. es6
+		var data = ['강', '김', '박'];
+		
+		for(var i=0; i<data.length; i++){
+			document.writeln(i+":"+data[i]+'<br/>');
+		} //기초문법
+	
+		data.forEach(function(value, index){
+			document.writeln(index+':'+value+'<br/>');
+		}); //파생문법 뷰,리액트,앵귤러js들이 이런 패턴으로 반복문을 쓴대
+3. es6
+		var data = ['강', '김', '박'];
+		
+		for(var i=0; i<data.length; i++){
+			document.writeln(i+":"+data[i]+'<br/>');
+		} //기초문법
+	
+		data.forEach(function(value, index){
+			document.writeln(index+':'+value+'<br/>');
+		}); //파생문법 뷰,리액트,앵귤러js들이 이런 패턴으로 반복문을 쓴대
+
+map에서는 of만 쓰인다 (in 안쓰임)
+
+6.3.화 대통령 선거일 휴무-종강일 미뤄지거나 토욜날 하루 추가 수업하거나.
+=> 6.14.대체수업
+
+
+----로그인 확인 자바스크립트---
+let m = new Map();
+m.set('java','1111');
+m.set('script','2222');
+m.set('nodejs','2222');
+m.set('java','3333');
+=> 새로운 객체를 생성했다.
+키와 값으로 데이터를 세팅했다.
+
+java,3333
+script,2222
+nodejs,2222
+=>결과 받는 방법
+(1)
+for(let item of m){
+	document.write(item);
+} 
+(2)
+for(let item of m){ //하나의 변수에
+	document.write(item[0]+":"+item[1]+'<br/>');
+}
+(3)
+for(let [k,v] of m){ //키와 값을 각각 따로
+	document.write(k+":"+v+'<br/>');
+} 
+
+let inputId = 'nodejs';
+let inputPw = '3333';
+=> 로그인 확인하기 위한 값 세팅
+
+★ 아이디와 패스워드가 동일하면 '로그인 성공'출력, 그렇지 않으면 '로그인 실패'출력
+=>
+let flag = false;
+for(let [id, pw] of m){  //객체 m에 대한 배열 
+	if(id===inputId && pw===inputPw){
+		document.write('<h1>로그인 성공</hr1>');
+		flag = true;
+		break;
+	}
+}
+if(!flag){
+	document.write('<h1>로그인 실패</hr1>');
+}
+------------
+
+맵은 키밸류로 저장하는 애
+
+사용자의 입력값을 찾으려면 폼태그를 찾아야해
+
+라디오버튼은 이름이 동일해야해
+
+ action='DBSave.jsp'
+
+상품평 등록을 완성하였습니다. = DBSave.jsp거
+
+ webUI - build path - jdbc6연동 (jdbc lib) 
+ -인식이 안되면 webapp-WEB-INF-lib 밑에 ojdbc6.jar파일 탐색기에서 찾아서 넣어보기
+
+***디비 연동
+form_db 파일이 화면 -> jsp까지 끌고 갈거야. :상품평 등록을 완성하였습니다.-> DBSave.jsp?name=ㅇㄹㄴ&item=ㄹㄴㅇ&content=ㄹㅇㄴㄹ&stars=5 가 넘어간거야
+ㄴname value 들을 파라미터라고 한다.
+ㄴ사용자가 선택하거나 입력값을 받아내어서 String name 에서 name안에 넣어 한 덩어리로
+src/main/java
+	dbcon
+		itemVO - source (1.getter setter 2.constructor using fields 3.super 4.toString )/ DAO 파일 만들기
+dBeaver 에서 table 만들기
+dbSave.jsp 파일 <!DOCTYPE html>위에 <%@ 카페 원문 복사 붙여넣기
+ItemDAO 파일에 생성자/인서트 함수 만들고 예외처리까지 입력
+자바는 디비연동하고 싶어서 필요해~
+form_db 가서 상품평 등록 입력 후 확인 > 콘솔창 [입력값확인]ItemVO [no=0, name=안녕, item=가방, content=조으네, stars=5]
+ㄴDAO까지 끌고온거야
+DAO 파일에서 1.2.3.4.5.7. 작성하기 > 진짜 사용자 입력값을 넣어오기
+
+돌아오는 월요일은 다음 주 월요일을 의미합니다. 'next Monday'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

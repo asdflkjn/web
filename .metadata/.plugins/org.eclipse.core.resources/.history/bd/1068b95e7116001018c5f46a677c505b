@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Javascript 객체지향 </title>
+</head>
+<body>
+<script>
+/*
+		[참고]
+		1. 함수
+		- 선언 :	함수 만들기 방법: function func(){} - 이 자체는 선언. 실행하려면 호출해야
+				
+		- 호출 :	func(); - 이렇게 하고 세미콜론 해야 호출
+				
+				
+		2. 클래스
+		- 선언 	 : function Student(){}	
+		
+		- 객체 생성 : var s = new Student();
+
+
+*/
+
+/* 
+//0. 	클래스 선언 -  생성자로 초기화하기
+function Student(id, name, dept){
+	this.id = id;
+	this.name = name;
+	this.dept = dept;
+	
+	this.display =function(){
+		var str  = "학번: "+id;
+		str += "/이름:" + name;
+		str += "/학과:" + dept + "<br/>"; 
+		return   str;
+	}
+}
+
+var kim = new Student("001","김길동", "컴공");
+var lee = new Student("002","이길동", "경영");
+
+document.write( kim.display() );
+document.write( lee['display']() );
+
+// showName이라는 변수에 function이라는 함수를 넣어도 됨
+// 추가로 함수 추가
+/* 
+kim.showName = function(){
+					document.write('이 학생의 이름은' + this.name + "입니다 <hr/>");
+				} //멤버변수이기 때문에 this를 넣어주어야 해
+				 */
+/*				 
+// 클래스의 프로토타입에다가 지정해주면 모두 적용 가능
+Student.prototype.showName = function(){
+	document.write('이 학생의 이름은' + this.name + "입니다 <hr/>");
+} 			 
+				 
+// 함수 호출했어
+kim.showName();
+lee.showName();
+
+console.log(kim)				
+*/
+				
+//1.객체리터럴
+var Student = function(id,name,dept){ //객체인지 함수인지 몰라. 근데 대문자야 클래스로 만들 생각인듯. 객체로 만들 의도야
+					this.id = id; //this멤버변수가 왔다. 클래스로 만들 의도구나
+					this.name = name;
+					this.dept = dept;
+				};
+Student.prototype = { //prototype은 일종의 객체
+					display : function(){
+								var str  = "학번: "+id;
+								str += "/이름:" + name;
+								str += "/학과:" + dept + "<br/>"; 
+								return   str;
+							  }
+					, showName : function(){
+									document.write('이 학생의 이름은' + this.name + "입니다 <hr/>");
+							   } 			 
+				};
+
+
+var kim = new Student("001","김길동", "컴공");
+var lee = new Student("002","이길동", "경영");
+
+document.write( kim.display() );
+document.write( lee['display']() );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	내가 제일 좋아하는 놀이 순서대로 한다면 <br>
+
+	<form name="frm">
+		<select name="play" size="8">
+			<option>밥먹기</option>
+			<option>그냥있기</option>
+			<option>잠자기</option>
+			<option>술먹기</option>
+			<option>멍때리기</option>
+			<br> <input type="button" id='up' value="▲"> <br/> 
+			<br/> <input type="button" id='up' value="▼"> <br/>
+			<br/>  
+		</select>
+	</form>
+</body>
+</html>

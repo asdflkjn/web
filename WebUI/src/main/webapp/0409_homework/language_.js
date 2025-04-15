@@ -1,0 +1,17 @@
+window.onload=function(){
+	alert('OK');
+	 var tbl = document.getElementById('tbl');
+	 list.onclick = function(evt){ 
+			var price = evt.target.getAttribute('data-price');
+			
+	}
+
+	/*var items = document.getElementsByClassName('item');
+		for(var i=0; i<items.length; i++){
+			items[i].onclick= fucntion(){
+				var price = this.getAttribute('data-price');
+			}
+			
+		}*/
+
+}

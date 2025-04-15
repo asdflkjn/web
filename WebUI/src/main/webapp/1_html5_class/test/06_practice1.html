@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>simple form</title>
+</head>
+<body>
+
+<form action="xxxxx.jsp">
+	<fieldset>
+	<legend>회원가입</legend>
+	<ol>
+		<li>
+			<label for='naming'>이름</label>
+			<input id='naming' name='naming' type='text' value='hong'/>
+		</li>
+		
+		<li>
+			<label for='gender'>성별</label>
+			<input id='gender' name='gender' value='male' type='radio' checked='checked'/>남자
+			<input id='gender' name='gender' value='female' type='radio'/>여자			
+		</li>
+		
+		<li>
+			<label for='job'>직업</label>
+			<select id='job' name='job'>
+				<option value='개발자'>개발자</option>
+				<option value='프로그래머'>프로그래머</option>
+				<option value='노가다'>노가다</option>
+			</select>
+		</li>
+		
+		<li>
+			<label for='hobby'>취미</label>
+			<input id='hobby' name='hobby' value='sleep' type='checkbox' checked='checked'/>잠자기
+			<input id='hobby' name='hobby' value='eat' type='checkbox'/>먹기
+			<input id='hobby' name='hobby' value='breath' type='checkbox'/>숨쉬기
+			<input id='hobby' name='hobby' value='spaceout' type='checkbox'/>멍때리기
+		</li>
+		
+		<li>
+			<label for='gen'>애인</label>
+			<input id='gen' name='gen' value='male' type='radio'/>있다
+			<input id='gen' name='gen' value='male' type='radio'/>없다
+		</li>
+		
+		<li>
+			<label for='tour'>여행하고 싶은 나라</label>
+			<input id='tour' name='tour' type='text' list='countries'/>
+			<datalist id='countries'>
+				<option>가나</option>
+				<option>스위스</option>
+				<option>별나라</option>
+			</datalist>
+		</li>
+		
+		<li>
+			<input type='submit' value='확인'/>
+			<input type='reset' value='취소'/>
+		</li>
+		
+	</ol>
+	
+	
+	
+	</fieldset>
+
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> es6 인수 </title>
+<script>
+ 
+	// @ 0. 함수는 인자의 갯수를 체크하지 않는다 /argument: 함수의 인자
+	
+ 
+ 
+	// @ 1. 인수의 기본값(default) 지정
+   	function multiple( first, second =1 ) //second =1 : 값이 안들어오면 기본값(디폴트)을 1이라고 지정할거야
+	{
+		return first * second;
+	}
+	document.writeln('곱은 ' +  multiple( 3, 4 ) + '<br/>'  );
+	document.writeln('곱은 ' +  multiple( 3, 4, 5 ) + '<br/>'  );
+	document.writeln('곱은 ' +  multiple( 3 ) + '<br/>' ); 
+	
+	
+	
+	
+	
+	// @ 2. 가변길이 인수(...)
+
+	 
+		 
+ 
+</script>
+</head>
+<body>
+
+</body>
+</html>

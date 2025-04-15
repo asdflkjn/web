@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+* {
+	margin : 0px;
+	padding : 0px;
+}
+
+#tbl {
+	border : 2px solid green;
+}
+
+td {
+	width: 100px;
+	height: 60px;
+}

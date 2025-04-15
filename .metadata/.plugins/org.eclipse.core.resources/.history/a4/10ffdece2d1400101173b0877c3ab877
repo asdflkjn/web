@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 핸들러 연결 </title>
+<script type="text/javascript">
+	let btn = document.getElementById('btn'); //화면에서 얻어올거야.id 요소에 btn이라는 변수로
+
+</script>
+
+  </head>
+ <body>
+	<input type='button' value='눌러'  id='btn' />
+ </body>
+</html>

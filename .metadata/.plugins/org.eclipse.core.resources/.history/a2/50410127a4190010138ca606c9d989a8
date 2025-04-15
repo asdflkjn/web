@@ -1,0 +1,34 @@
+package basic;
+
+
+public class EmpDAO {
+
+	public EmpDAO() throws Exception{
+		// 1. 드라이버로딩
+	}
+	
+	public void insert(EmpVO vo) throws Exception {
+	}
+
+	
+	/*	
+	넘겨받은 user/pass를 emp 테이블의 ename/empno를 비교
+	*/
+	public boolean loginCheck(EmpVO vo) throws Exception{
+		boolean check = false;
+		// 2.
+		// 3.SQL문장
+		String sql = "SELECT * FROM emp WHERE ename=? AND empno=?";
+		// 4.전송객체 얻기
+		// 5.전송
+		// 6.결과처리
+		if(rs.next) {
+			check = true;
+		}
+		
+		
+		// 7.닫기
+		return check;
+	}
+
+}
