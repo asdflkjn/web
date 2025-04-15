@@ -119,3 +119,19 @@ D:\web\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\work\Catalina\localho
 	//String userId = (String)session.getAttribute("id"); -이렇게 강제형변환 하면 널값이 올때 널포인터익셉션 발생
 
 
+여유 되면 카드 연습하기
+
+sql 틈틈히 연습- 문장 만들기
+
+인자가 없으면 게터, 있으면 세터
+
+
+구동을 안한다> 포트 어쩌구 한다 : 톰캣 서버를 지우고 다시 만들기 Tomcat 9.0
+
+
+
+\\192.168.0.19
+
+
+
+

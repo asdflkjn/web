@@ -1,3 +1,21 @@
 /**
- * 
+ * $(function(){
+ * 		// mouseenter / mouseleave
+ * 		// mouseover / mouseout
+ * 		// hover
+ * })
  */
+
+ //문서가 준비됐을때
+ $(document).ready(function(){
+	 
+	 $('.rollover img').hover(function(){ //자손 중에 img
+		 //마우스 올라갔을 때
+		 $(this).attr('src', $(this).attr('src').replace('_off','_on') ); //이벤트가 올라간 애라는 뜻에서 this 
+		 //img 태그를 찾아 this찾아서 속성 바꿀거야. off를 on으로 바꿔서 다시 지정해줘
+	}, function(){
+		 //마우스 나갔을 때
+		 
+	 });
+	 
+ })

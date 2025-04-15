@@ -1,0 +1,20 @@
+/**
+ * $(function(){
+ * 		// mouseenter / mouseleave
+ * 		// mouseover / mouseout
+ * 		// hover
+ * })
+ */
+
+ //문서가 준비됐을때
+ $(document).ready(function(){
+	 
+	 $('').hover(function(){
+		 //마우스 올라갔을 때
+		 
+	 }, function(){
+		 //마우스 나갔을 때
+		 
+	 });
+	 
+ })

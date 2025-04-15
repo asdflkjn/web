@@ -32,7 +32,37 @@ $(document).ready(function(){
 		$(this).removeClass('active'); 
 	});
 	
+	// [3]-----------
+	/* 
+		자바스크립트: innerHTML
+		제이쿼리  : text() / html()
+		
+		[*]제이쿼리 특징: setter와 getter가 동일하다
+		
+			함수(인자): setter
+			함수()  : getter
+	*/
 	
+	//alert( $('#divText').text() );
+			
+	//$('#divText').text("변경합니다")
+	
+	$('#divText').text('<img sre="image/grm.jpg" />')
+	
+	$('#divHtml').html('<img sre="image/grm.jpg" />');
+	
+	$('#divEmpty').empty();
+	
+	//현재 강아지 그림을 클릭하면 고양이그림으로 변경
+	$('#changeGrim').click(function(){
+		//alert('ok')
+		//$('#changeGrim').attr('src', 'images/cat.jpg');
+		 
+		//alert($(this)).attr('src')); //"images/puppy.jpg"
+		//alert($(this).attr('src').replace('puppy','cat'));
+		$(this).attr('src', $(this).attr('src').replace('puppy','cat') );
+		
+	})
 })
 
 
